@@ -9,7 +9,5 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'app';
   constructor(){}
   ngOnInit(){}
-  ngAfterViewInit(){
-    console.log(jQuery("h1").html());
-  }
+  ngAfterViewInit(){}
 }
