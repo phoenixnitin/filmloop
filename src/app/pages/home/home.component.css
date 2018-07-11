@@ -5,15 +5,34 @@
 .film{
   letter-spacing: 4px;
 }
-.contact-title{
+/*---------------------*/
+#what-we-do{
+  background-color: #023749;
+  color: white;
+}
+#wwd-text{
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: justify;
+}
+#ready-to-discover{
+  text-align: justify;
+  font-size: 28px;
+}
+.wwd-btn{
+  font-size: 20px;
+  width: 290px;
+}
+/*---------------------*/
+.contact-title, .what-we-do-title{
   display: inline-flex;
   height: 80px;
 }
-.contact-title > img{
+.contact-title > img, .what-we-do-title > img{
   height: 75px;
   position: absolute;
 }
-.contact-title > h2{
+.contact-title > h2, .what-we-do-title > h2{
   position: absolute;
 }
 .contact-us{
@@ -47,7 +66,9 @@ button{
   padding: 5px 40px;
   background-color: #016C90;
   color: white;
-
+}
+#send-btn{
+  margin-top: -5px;
 }
 .social-media{
   background-color: #023749;

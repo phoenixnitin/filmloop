@@ -8,7 +8,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 export class HomeComponent implements OnInit, AfterViewInit{
   constructor(){}
   ngOnInit(){
-    let docHeight = jQuery(document).height();
+    let docHeight = jQuery(window).height();
     let floopHeight = jQuery("#filmloop").height();
     jQuery("#filmloop").css("margin-top", (docHeight - floopHeight)/2);
 
