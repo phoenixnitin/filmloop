@@ -5,7 +5,60 @@
 .film{
   letter-spacing: 4px;
 }
-.blue{
-  background-color: blue;
+.contact-title{
+  display: inline-flex;
+  height: 80px;
+}
+.contact-title > img{
+  height: 75px;
+  position: absolute;
+}
+.contact-title > h2{
+  position: absolute;
+}
+.contact-us{
+  background-color: #016C90;
   color: white;
+  text-align: center;
+}
+.take-input{
+  margin: 5px auto;
+}
+input, textarea{
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 5px 0px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #016C90;
+}
+input::placeholder, textarea::placeholder{
+  color: white;
+}
+textarea{
+  resize: vertical;
+}
+#message{
+  height: 200px;
+}
+button{
+  border-radius: 10px;
+  padding: 5px 40px;
+  background-color: #016C90;
+  color: white;
+
+}
+.social-media{
+  background-color: #023749;
+  color: white;
+  text-align: center;
+  height: 300px;
+}
+.social-media > img{
+  margin: 100px 10px 8px 10px;
+  height: 35px;
+}
+.center{
+  text-align: center;
 }
