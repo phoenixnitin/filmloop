@@ -8,10 +8,12 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 export class HomeComponent implements OnInit, AfterViewInit{
   constructor(){}
   ngOnInit(){
-    let docHeight = jQuery(window).height();
+    let winHeight = jQuery(window).height();
+    let winWidth = jQuery(window).width();
     let floopHeight = jQuery("#filmloop").height();
-    jQuery("#filmloop").css("margin-top", (docHeight - floopHeight)/2);
-
+    jQuery("#filmloop").css("margin-top", (winHeight - floopHeight)/2);
+    let memRangeWidth = jQuery("#mem-range").width();
+    jQuery("#mem-range").css("margin-left", (winWidth-memRangeWidth-40)/2);
     jQuery(".container-block").height(jQuery(window).height());
   }
   ngAfterViewInit(){
