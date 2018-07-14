@@ -175,7 +175,7 @@
   border-radius: 10px;
   padding: 10px 10px 20px 10px;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 }
 .card > ul {
   list-style: none;
@@ -217,7 +217,20 @@ hr{
   background-color: #047398;
   color: white;
 }
-
+.ques-container-box{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ques-container{
+  padding: 0 40px;
+}
+.title{
+  text-align: justify;
+  font-size: 25px;
+}
+.content{
+  text-align: justify;
+}
 /*---------------------*/
 .contact-title, .what-we-do-title{
   display: inline-flex;
