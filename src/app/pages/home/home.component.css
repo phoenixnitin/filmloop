@@ -1,16 +1,21 @@
 @font-face {
   font-family:book;
-  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf"); 
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf");
  }
 
  @font-face {
   font-family:head;
-  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf"); 
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf");
  }
 
  h1{
    font-size: 70px;
  }
+
+.font-head{
+  font-family: head;
+  font-size: 30px;
+}
 
 #filmloop{
   margin: 0 auto;
@@ -30,7 +35,7 @@
   font-size: 20px;
   margin-top: 400px;
   background-color: transparent;
-  
+
 }
 /*---------------------*/
 #actor-or-agent{
@@ -51,18 +56,21 @@
   font-family:head;
   top: 15%;
   left: 12%;
-   
+
 }
 #agent{
   float: right;
   font-family:head;
-  top: 50%; 
+  top: 50%;
 }
 /*---------------------*/
 #what-we-do{
   background-color: #023749;
   font-family:head;
   color: white;
+}
+#what-we-do > div > img{
+  margin-top: 15px;
 }
 #wwd-text{
   text-transform: capitalize;
@@ -80,6 +88,9 @@
   background-position: center; */
   background-color: #023749;
 }
+#img_before_prices > img{
+  width: inherit;
+}
 #img_before_prices2{
   display: block;
   margin-left: auto;
@@ -87,7 +98,6 @@
 }
 #knowmore{
   font-family: book;
-  font-size: 
 }
 .wwd-btn{
   font-size: 20px;
@@ -98,7 +108,29 @@
   background-color: #023749;
   color: white;
   font-family: head;
+  padding: 10px 10px 50px 10px;
 }
+#membership-plan > div > input{
+  display: unset;
+}
+
+.range-labels {
+  list-style: none;
+  display: inline-flex;
+}
+
+.range-labels{
+  padding: 0px;
+  margin-top: 8px;
+}
+
+.range-labels >  li {
+  width: 85px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
 #mem-range{
   width: 200px;
 }
@@ -133,6 +165,59 @@
   background: #023749;
   cursor: pointer;
 }
+.card-container{
+  width: 700px;
+  margin: 0 auto;
+}
+.card{
+  background-color: white;
+  color: #023749;
+  border-radius: 10px;
+  padding: 10px 10px 20px 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.card > ul {
+  list-style: none;
+  padding: 0 30px;
+}
+.li-with-fa{
+  display: flex;
+}
+.icon{
+  padding: 0px;
+  margin-right: 10px;
+}
+.fas{
+  font-size: 20px;
+}
+.fa-times{
+  width: 20px;
+  color: red;
+}
+hr{
+  border-top: 4px solid #023749;
+  margin: 10px 0;
+}
+.txt-left{
+  text-align: left;
+}
+.pro-feature-container{
+  position: absolute;
+  width: 100px;
+  clip: rect(-18px,101px,94px,-18px);
+}
+.pro-feature{
+  position: absolute;
+  width: 200px;
+  transform: rotate(-43deg);
+  font-size: 25px;
+  top: 8px;
+  left: -71px;
+  background-color: #047398;
+  color: white;
+}
+
 /*---------------------*/
 .contact-title, .what-we-do-title{
   display: inline-flex;

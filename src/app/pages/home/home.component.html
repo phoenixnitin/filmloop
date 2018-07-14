@@ -3,7 +3,7 @@
 <div class="">
   <div class="col-xs-12 container-block">
     <div id="filmloop">
-        
+
         <img src="../../../assets/img/fl00_logo_top.jpg" height='404' width='400' style="display: block;
         margin-left: auto;
         margin-right: auto;"
@@ -38,9 +38,7 @@
       <span class="col-xs-2"></span>
       <p class="col-xs-8"><br>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
       </p>
     </div>
     <div class="col-xs-12">
@@ -57,23 +55,60 @@
     </div>
     </div>
   </div>
- 
-   <div id="img_before_prices" class="col-xs-12 container-block center"> 
-      <img src="../../../assets/img/1-display.png" align='middle'> 
-    </div> 
-  <div id="membership-plan" class="col-xs-12 container-block center">
+
+   <div id="img_before_prices" class="col-xs-12 container-block center">
+      <img src="../../../assets/img/BENEFITS_DISPLAY/1-display.png" align='middle'>
+    </div>
+  <div id="membership-plan" class="col-xs-12 center">
     <h2>MEMBERSHIP PLANS FOR ACTORS</h2>
     <h3>DISPLAY PRICES FOR:</h3>
+    <div class="range">
+      <input type="range" min="0" max="12" value="0" class="slider" id="mem-range" step="6">
+    </div>
+    <ul class="range-labels">
+      <li>1<br>Month</li>
+      <li>6<br>Month</li>
+      <li>12<br>Month</li>
+    </ul>
+    <div class="card-container">
+      <div class="col-xs-12 col-sm-6">
+        <div class="card">
+          <ul>
+            <li class="center font-head">Basic</li><hr />
+            <li class="center font-head">Free</li><hr />
+            <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Create and Share a Professional Portfolio</div></li><hr />
+            <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Direct connection with casting directors you already know</div></li><hr />
+            <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Receive messages and audition calls from connected casting directors and apply instantly</div></li><hr />
+            <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-times"></i></div><div>Direct access to audition calls from all casting directors on filmloop</div></li><hr />
+          </ul>
+          <button class="btn btn-default">Register Now</button>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="card">
+          <div class="pro-feature-container">
+            <div class="pro-feature">Best Value</div>
+          </div>
+          <ul>
+              <li class="center font-head">Pro</li><hr />
+              <li class="center font-head">200/month</li><hr />
+              <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Create and Share a Professional Portfolio</div></li><hr />
+              <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Direct connection with casting directors you already know</div></li><hr />
+              <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Receive messages and audition calls from connected casting directors and apply instantly</div></li><hr />
+              <li class="txt-left li-with-fa"><div class="icon"><i class="fas fa-check"></i></div><div>Direct access to audition calls from all casting directors on filmloop</div></li><hr />
+            </ul>
+          <button class="btn btn-default">Register Now</button>
+        </div>
+      </div>
 
-    <input type="range" min="1" max="12" value="1" class="slider" id="mem-range">
-
+    </div>
   </div>
   <div class="col-xs-12 container-block contact-us">
     <div id='knowmore' class="row col-xs-12 contact-title">
       <img src="../../../assets/img/hamb_menu_white.png">
       <h1 class="center col-xs-12">WANT TO KNOW MORE?</h1>
     </div>
-    
+
     <div>
       <h3 style="font-family:book ;">Contact Us</h3>
       <div class="row">
@@ -128,11 +163,11 @@ function carousel() {
     var i;
     var x = document.getElementsByTagName("s-s");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+       x[i].style.display = "none";
     }
     myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000);    
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
 }
 </script>

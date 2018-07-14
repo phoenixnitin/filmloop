@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit, AfterViewInit{
     let winWidth = jQuery(window).width();
     let floopHeight = jQuery("#filmloop").height();
     jQuery("#filmloop").css("margin-top", (winHeight - floopHeight)/2);
-    let memRangeWidth = jQuery("#mem-range").width();
-    jQuery("#mem-range").css("margin-left", (winWidth-memRangeWidth-40)/2);
     jQuery(".container-block").height(jQuery(window).height());
   }
   ngAfterViewInit(){
