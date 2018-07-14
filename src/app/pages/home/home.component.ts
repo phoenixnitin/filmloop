@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
     jQuery("#filmloop").css("margin-top", (winHeight - floopHeight)/2);
     jQuery(".container-block").height(jQuery(window).height());
     jQuery(".ques-container").eq(1).height(jQuery(".ques-container").first().height());
+    jQuery(".our-pricing-ques-container").eq(1).height(jQuery(".our-pricing-ques-container").first().height());
   }
   ngAfterViewInit(){
   }

@@ -12,6 +12,9 @@
    font-size: 70px;
  }
 
+.title-font-head{
+  font-family: head;
+}
 .font-head{
   font-family: head;
   font-size: 30px;
@@ -25,6 +28,10 @@
 .film{
   letter-spacing: 4px;
 }
+.title-icon{
+  margin-top: 15px;
+}
+
 /*---------------------*/
 #intelligent-casting{
   background-color: #3195B7;
@@ -69,9 +76,6 @@
   font-family:head;
   color: white;
 }
-#what-we-do > div > img{
-  margin-top: 15px;
-}
 #wwd-text{
   text-transform: capitalize;
   font-family:book;
@@ -87,6 +91,7 @@
   /* background-image: url("../../../assets/img/BENEFITS_DISPLAY/1-display.png");
   background-position: center; */
   background-color: #023749;
+  padding-bottom: 50px;
 }
 #img_before_prices > img{
   width: inherit;
@@ -104,13 +109,28 @@
   width: 290px;
 }
 /*---------------------*/
+#our-pricing{
+  background-color: #023749;
+  color: white;
+}
+#our-pricing > h2{
+  margin-top: 120px;
+}
+.our-pricing-ques-container-box{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.our-pricing-ques-container{
+  padding: 0 40px;
+}
+/*---------------------*/
 #membership-plan{
   background-color: #023749;
   color: white;
   font-family: head;
   padding: 10px 10px 50px 10px;
 }
-#membership-plan > div > input{
+#membership-plan > div > input, #our-pricing > div > input{
   display: unset;
 }
 
@@ -131,7 +151,7 @@
   font-size: 14px;
 }
 
-#mem-range{
+#mem-range, #mem-range-our-pricing{
   width: 200px;
 }
 .slider {
@@ -232,15 +252,15 @@ hr{
   text-align: justify;
 }
 /*---------------------*/
-.contact-title, .what-we-do-title{
+.contact-title, .what-we-do-title, .our-pricing-title{
   display: inline-flex;
   height: 80px;
 }
-.contact-title > img, .what-we-do-title > img{
+.contact-title > img, .what-we-do-title > img, .our-pricing-title > img{
   height: 75px;
   position: absolute;
 }
-.contact-title > h2, .what-we-do-title > h2{
+.contact-title > h1, .what-we-do-title > h1, .our-pricing-title > h1{
   position: absolute;
 }
 .contact-us{
