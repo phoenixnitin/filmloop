@@ -1,6 +1,21 @@
+@font-face {
+  font-family:book;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf"); 
+ }
+
+ @font-face {
+  font-family:head;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf"); 
+ }
+
+ h1{
+   font-size: 70px;
+ }
+
 #filmloop{
   margin: 0 auto;
   text-align: center;
+  font-family: head;
 }
 .film{
   letter-spacing: 4px;
@@ -9,16 +24,22 @@
 #intelligent-casting{
   background-color: #3195B7;
   color: white;
+  font-family: head;
 }
 #intelligent-casting > div > button{
   font-size: 20px;
   margin-top: 400px;
   background-color: transparent;
+  
 }
 /*---------------------*/
 #actor-or-agent{
   background-color: #023749;
   color: white;
+  background-image: url("../../../assets/img/filmloop_mid.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
 }
 #actor-or-agent > div > img{
   height: 75px;
@@ -27,23 +48,46 @@
 }
 #actor{
   float: left;
+  font-family:head;
+  top: 15%;
+  left: 12%;
+   
 }
 #agent{
   float: right;
+  font-family:head;
+  top: 50%; 
 }
 /*---------------------*/
 #what-we-do{
   background-color: #023749;
+  font-family:head;
   color: white;
 }
 #wwd-text{
   text-transform: capitalize;
+  font-family:book;
   font-size: 20px;
   text-align: justify;
 }
 #ready-to-discover{
-  text-align: justify;
+  text-align: center;
   font-size: 28px;
+  font-family: book;
+}
+#img_before_prices{
+  /* background-image: url("../../../assets/img/BENEFITS_DISPLAY/1-display.png");
+  background-position: center; */
+  background-color: #023749;
+}
+#img_before_prices2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#knowmore{
+  font-family: book;
+  font-size: 
 }
 .wwd-btn{
   font-size: 20px;
@@ -53,6 +97,7 @@
 #membership-plan{
   background-color: #023749;
   color: white;
+  font-family: head;
 }
 #mem-range{
   width: 200px;
@@ -148,3 +193,5 @@ button{
 .center{
   text-align: center;
 }
+
+
