@@ -1,7 +1,18 @@
-#filmloop{
-  margin: 0 auto;
-  text-align: center;
-}
-.film{
-  letter-spacing: 4px;
-}
+
+
+@font-face {
+  font-family:book;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf");
+ }
+
+ @font-face {
+  font-family:head;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf");
+ }
+
+ h1{
+   font-size: 70px;
+ }
+
+
+
