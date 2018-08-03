@@ -1,7 +1,136 @@
-#filmloop{
-  margin: 0 auto;
-  text-align: center;
+/*//////////////////PROFILE////////////////*/
+
+
+@font-face {
+  font-family:book;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf");
+ }
+
+ @font-face {
+  font-family:head;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf");
+ }
+
+@font-face{
+  font-family: int-txt ;
+  src:url('../../../assets/fonts/montserrat/Montserrat-Regular.otf');
 }
-.film{
-  letter-spacing: 4px;
+
+@font-face{
+  font-family: int-txt-headers ;
+  src:url('../../../assets/fonts/montserrat/Montserrat-SemiBold.otf');
 }
+
+ .headerStyle {
+   font-size: 20px;
+   font-family: book;
+   color: #023749;
+   font-weight: bold;
+ }
+
+ .internal-headers{
+   
+   font-family: int-txt ;
+   color: #023749;
+ }
+
+ .content-text-headers{
+   font-family: int-txt-headers ;
+   color: #023749;
+   font-weight: bold;
+ }
+
+ .content-text{
+  font-family: int-txt ;
+  color: #023749;
+}
+
+ #best-matches{
+   font-size: 50px;
+   color: #023749;
+   font-family: book;
+   text-align: center;
+ }
+
+ .dummy-pfp{
+   background-color: #023749;
+   width: 300px;
+   height: 450px;
+
+ }
+
+ .dummy-img{
+  
+  background-color: #023749;
+  background-size: 300px 100px;
+  border-left: 20px;
+  border-right: 20px;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  width: 220px;
+  height: 350px;
+ }
+
+ .borders{
+   border-left: 13%;
+   border-right: 13%;
+ }
+
+ .top{
+   background-color: #023749;
+   color: #ffffff;
+   height: 100px;
+   font-family: book;
+   font-size: 40px;
+   text-align: start;
+   width: auto;
+   
+ }
+
+ #actor-name{
+   font-size: 50px;
+   color: #023749;
+   font-family: book;
+   text-align: center;
+ }
+
+ .underlined-links{
+   font-size: 20px;
+   font-family: book;
+   
+   color: #023749;
+   text-decoration: underline;
+   font-weight: ;
+   
+ }
+ 
+ #follow-us{
+    font-family: book;
+    color: #023749;
+    font-weight:;
+    color:white;
+    font-size: 25px;
+    text-align: center;
+ }
+
+ .xsm-border{
+  height: 20px;
+ background-color: #ffffff;
+ }
+
+ .sm-border{
+  height: 30px;
+ background-color: #ffffff;
+ }
+
+ .lg-border{
+  height: 40px;
+ background-color: #ffffff;
+ }
+
+ .pic-border{
+  height: 80px;
+ background-color: #ffffff;
+ }
+
+
