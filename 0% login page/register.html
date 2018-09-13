@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- {% load appendedurl %} -->
+  <meta charset="utf-8">
+  <meta name="google-signin-client-id" content="filmloop-196910">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title></title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/regstyle.css">
+  
+
+  <!--Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/static/js/regscripts.js"></script>
+  <script src="/static/js/classie.js"></script>
+  <script src="/static/js/validatejquery.js"></script>
+  <script src="/static/js/jquery.validate.js"></script>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+  var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init();
+      attachSignin(document.getElementById('customBtn'));
+    });
+  };
+
+  function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          document.getElementById('name').innerText = "Signed in: " +
+              googleUser.getBasicProfile().getName();
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+  </script>
+
+  <style type="text/css">
+    .input__field--hoshi{
+      margin-top: 2em;
+    }
+
+  </style>
+</head>
+
+<body>
+<div id="main-wrapper">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 left-side">
+        <!-- <header>
+          <br\>
+          <br>
+          <span style="" width="70px">FILMLOOP</span>
+        </header> -->
+      </div>
+     <!--  <div class="error">
+      {% if error %}
+
+      {{error}}
+
+      {% endif %}
+    </div> -->
+      <div class="col-md-6 right-side">
+    <div id="gSignInWrapper" style="text-align: center;">
+      <span width="20px"><h3>Create an account</h3></span>
+    <!-- <span class="label">Sign in with:</span> -->
+    <div id="customBtn" class="customGPlusSignIn">
+      <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.get_full_path|urls}}"><span class="icon"><img href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.get_full_path|urls}}" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1000px-Google_%22G%22_Logo.svg.png" style="width: 100%;"></span>
+      <span class="buttonText">Sign in with Google</span></a>
+    </div>
+  </div>
+  <div id="name"></div>
+  <script>startApp();</script>
+  <br><center><legend>OR</legend></center><br>
+      <form id="regform" name="regform" method="post" action="">
+    <!--   {% csrf_token %} -->
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="name" name = "username" required />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="name">
+            <span class="input__label-content input__label-content--hoshi">User name</span>
+          </label>
+        </span>
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="text" id="email" name = "email" required />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="email">
+            <span class="input__label-content input__label-content--hoshi">E-mail</span>
+          </label>
+        </span>
+        <span class="input tooltip1" style="width: 100%;">
+                <span class="input" style="overflow: hidden; width: 100%;">
+                  <input class="input__field input__field--hoshi" type="password" id="password" name="password1" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
+                    <span class="input__label-content input__label-content--hoshi" style="margin-bottom: 2px;">Password</span>
+                  </label>
+                </span>
+                <span class="tooltiptext1">
+                  Password must:-
+                  <ul>
+                    <li>Be at least 8 characters long</li>
+                    <li>Not be the same as account name</li>
+                    <li>Have at least one number</li>
+                    <li>Not be a common password</li>
+                  </ul>
+                </span>
+        </span>
+        <span class="input input--hoshi">
+          <input class="input__field input__field--hoshi" type="password" id="confirmpassword" name="password2" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="confirmpassword">
+            <span class="input__label-content input__label-content--hoshi">Repeat Passowrd</span>
+          </label>
+        </span>
+        <div class="cta">
+          <button class="btn-disabled btn-primary pull-left" id="submit" disabled>
+            Sign-Up Now
+          </button>
+          <span><a href="/login1/">I am already a member</a></span>
+        </div>
+
+      </form>
+<!--         <ul class="social list-inline">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Linkedin</a></li>
+        </ul> -->
+      </div >
+      
+    </div>
+  </div>
+
+</div> <!-- end #main-wrapper -->
+
+<!-- Scripts -->
+<script>
+  (function() {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
+
+      $(document).ready(function(){
+        $("#password").change(function(){
+          $("#submit").removeClass("btn");
+          $("#submit").addClass("btn-disabled");
+          $("#confirmpassword").addClass("mismatch");
+          var validator = $("#regform").validate({
+              rules: {
+                  password: "required",
+                  confirmpassword: {
+                      equalTo: "#password"
+                  }
+              },
+              messages: {
+                  password: "",
+                  confirmpassword: ""
+              }
+          });
+          if (validator.form()) {
+              document.getElementById("submit").disabled = false;
+              $("#submit").removeClass("btn-disabled");
+              $("#submit").addClass("btn");
+              $("#confirmpassword").removeClass("mismatch");
+          }
+        });
+        $("#confirmpassword").change(function(){
+          $("#submit").removeClass("btn");
+          $("#submit").addClass("btn-disabled");
+          $("#confirmpassword").addClass("mismatch");
+          var validator = $("#regform").validate({
+              rules: {
+                  password: "required",
+                  confirmpassword: {
+                      equalTo: "#password"
+                  }
+              },
+              messages: {
+                  password: "",
+                  confirmpassword: ""
+              }
+          });
+          if (validator.form()) {
+              document.getElementById("submit").disabled = false;
+              $("#submit").removeClass("btn-disabled");
+              $("#submit").addClass("btn");
+              $("#confirmpassword").removeClass("mismatch");
+          }
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>

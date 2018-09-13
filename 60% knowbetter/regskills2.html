@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
+	<link rel="stylesheet" href="">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Filmloop</title>
+
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+		<div class="nav">
+           
+				<div class="container-fluid top">
+				  <div style="width: 100%px; height:10px;"></div>
+			<img src="images/ff_Webp.net-resizeimage.png">
+				 <!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
+				</div>
+			   
+		</div> 
+
+        <div class="container">
+           <form action="/regskills2/" method="post" enctype="multipart/form-data" onsubmit=" return validateForm()">
+	            <div id="text">
+						<div class="ccheader">
+								<h1>HELP US TO KNOW<br>YOU BETTER</h1>	
+						</div>
+						<div class="side-bar">
+								<div class="progress"><label>60%</label></div>
+							<div id='complete'>Complete your<br>profile</div>
+							</div>
+	              
+	              <h4 align="center" class="choose">Choose your physical atributes:</h4>
+	              <br>
+	            </div>
+	            <div class="row">
+	            	<div class="col-md-6">
+			            <div class="ccfield-prepend">
+					        <input class="ccformfield" type="number" placeholder="Height (in cm)" name = "height" required min="0" max="250" value="{{ fields.height }}">
+					    </div>
+					</div>
+					<div class="col-md-6">
+					      <div class="ccfield-prepend">
+					        <input class="ccformfield" type="number" placeholder="Waist(in cm)" name = "waist" required min="0" max="150" value="{{ fields.waist }}">
+					    </div>
+					</div>
+					<div class="col-md-6">
+			            <div class="ccfield-prepend">
+					        <input class="ccformfield" type="number" placeholder="Hip (in cm)" name = "hip" required min="0" max="250" value="{{ fields.hip }}">
+					    </div>
+					</div>
+					<div class="col-md-6">
+					    <div class="ccfield-prepend">
+					        <input class="ccformfield" type="number" placeholder="Weight (in kg)" name = "weight" required min="0" max="400" value="{{ fields.weight }}">
+					    </div>
+					</div>
+					<div class="col-md-6">
+					    <div class="ccfield-prepend">
+					        <input class="ccformfield" type="number" placeholder="Chest/bust(in cm)" name = "chest" required min="0" max="150" value="{{ fields.chest }}">
+					    </div>
+					</div>
+				</div>
+
+			        <br>
+			    <div class="gender_1" style="">
+				    
+				    <div class="row">
+				    	<div class="col-md-6">    <!--skill 1------------------------------------------------------------------------>
+							<div class="row">
+								<div class="col-md-6 skill_padding">
+										<label class="skin_com">Skin complexion</label>
+								</div>
+
+								<div class="col-md-6 skill_item_padding">
+										<div class="skin">
+												<!-- <div class="row"> -->
+													<div class="col-md-12 skill_padding_inner">
+													 <label class="check item1"for="fair">Fair<input type="radio" name="skin" value="fair" id="fair" {% ifequal 'fair' fields.skin %} checked {% endifequal %}>
+													 <span class="checkmark"></span> </label>
+													</div>
+												<!-- </div> -->
+
+												<!-- <div class="row"> -->
+													<div class="col-md-12 skill_padding_inner">
+												 	 <label class="check item2"for="wheatish">wheatish<input type="radio"  name="skin" value="wheatish" id="wheatish" {% ifequal 'wheatish' fields.skin %} checked {% endifequal %}><span class="checkmark"></span> </label>
+													</div>
+
+												<!-- </div> -->
+													<!-- <div class="row"> -->
+													 <div class="col-md-12 skill_padding_inner">
+													 <label class="check item3"for="dark">dark<input type="radio"  name="skin" value="dark" id="dark" {% ifequal 'dark' fields.skin %} checked {% endifequal %}>
+													 <span class="checkmark"></span> </label>
+													</div>
+												<!-- </div> -->
+										</div>
+								</div>
+							</div>
+						</div>
+
+					<div class="col-md-6"> <!--skill 2------------------------------------------------------------------------>
+							<div class="row">
+								<div class="col-md-6 skill_padding">
+										<label class="skin_com">Skin complexion</label>
+								</div>
+
+								<div class="col-md-6 skill_item_padding">  
+										<div class="skin">
+												<!-- <div class="row"> -->
+													<div class="col-md-12 skill_padding_inner">
+													 <label class="check item1"for="fair">Fair<input type="radio" name="skin" value="fair" id="fair" {% ifequal 'fair' fields.skin %} checked {% endifequal %}>
+													 <span class="checkmark"></span> </label>
+													</div>
+												<!-- </div> -->
+
+												<!-- <div class="row"> -->
+													<div class="col-md-12 skill_padding_inner">
+													  <label class="check item2"for="wheatish">wheatish<input type="radio"  name="skin" value="wheatish" id="wheatish" {% ifequal 'wheatish' fields.skin %} checked {% endifequal %}><span class="checkmark"></span> </label>
+													</div>
+
+												<!-- </div> -->
+													<!-- <div class="row"> -->
+													 <div class="col-md-12 skill_padding_inner">
+													 <label class="check item3"for="dark">dark<input type="radio"  name="skin" value="dark" id="dark" {% ifequal 'dark' fields.skin %} checked {% endifequal %}>
+													 <span class="checkmark"></span> </label>
+													</div>
+												<!-- </div> -->
+										</div>
+								</div>
+							</div>
+					</div>
+
+						
+
+						<div class="col-md-6"> <!--skill 3------------------------------------------------------------------------>
+								<div class="row">
+									<div class="col-md-6 skill_padding">
+											<label class="skin_com">Skin complexion</label>
+									</div>
+	
+									<div class="col-md-6 skill_item_padding">  
+											<div class="skin">
+													<!-- <div class="row"> -->
+														<div class="col-md-12 skill_padding_inner">
+														 <label class="check item1"for="fair">Fair<input type="radio" name="skin" value="fair" id="fair" {% ifequal 'fair' fields.skin %} checked {% endifequal %}>
+														 <span class="checkmark"></span> </label>
+														</div>
+													<!-- </div> -->
+	
+													<!-- <div class="row"> -->
+														<div class="col-md-12 skill_padding_inner">
+														  <label class="check item2"for="wheatish">wheatish<input type="radio"  name="skin" value="wheatish" id="wheatish" {% ifequal 'wheatish' fields.skin %} checked {% endifequal %}><span class="checkmark"></span> </label>
+														</div>
+	
+													<!-- </div> -->
+														<!-- <div class="row"> -->
+														 <div class="col-md-12 skill_padding_inner">
+														 <label class="check item3"for="dark">dark<input type="radio"  name="skin" value="dark" id="dark" {% ifequal 'dark' fields.skin %} checked {% endifequal %}>
+														 <span class="checkmark"></span> </label>
+														</div>
+													<!-- </div> -->
+											</div>
+									</div>
+								</div>
+						</div>
+
+						<div class="col-md-6">  <!--skill 4------------------------------------------------------------------------>
+								<div class="row">
+									<div class="col-md-6 skill_padding">
+											<label class="skin_com">Skin complexion</label>
+									</div>
+	
+									<div class="col-md-6 skill_item_padding">
+											<div class="skin">
+													<!-- <div class="row"> -->
+														<div class="col-md-12 skill_padding_inner">
+														 <label class="check item1"for="fair">Fair<input type="radio" name="skin" value="fair" id="fair" {% ifequal 'fair' fields.skin %} checked {% endifequal %}>
+														 <span class="checkmark"></span> </label>
+														</div>
+													<!-- </div> -->
+	
+													<!-- <div class="row"> -->
+														<div class="col-md-12 skill_padding_inner">
+														  <label class="check item2"for="wheatish">wheatish<input type="radio"  name="skin" value="wheatish" id="wheatish" {% ifequal 'wheatish' fields.skin %} checked {% endifequal %}><span class="checkmark"></span> </label>
+														</div>
+	
+													<!-- </div> -->
+														<!-- <div class="row"> -->
+														 <div class="col-md-12 skill_padding_inner">
+														 <label class="check item3"for="dark">dark<input type="radio"  name="skin" value="dark" id="dark" {% ifequal 'dark' fields.skin %} checked {% endifequal %}>
+														 <span class="checkmark"></span> </label>
+														</div>
+													<!-- </div> -->
+											</div>
+									</div>
+								</div>
+						</div>
+						<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!11 -->
+						<!-- <div class="col-md-6">
+								<div class="row">
+									<div class="col-md-6 skill_padding"></div>
+									<div class="col-md-6 skill_item_padding"></div>
+							</div>
+						</div> -->
+						<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!1 -->
+						
+						</div>
+
+
+
+						
+						<!-- <div class="col-md-6">	        
+							 <h4 class="hair_pat tint">Hair pattern</h4>
+						    			<div class="hair_pattern">
+							               	<div class="row">
+							               		<div class="col-md-3">
+													<label class="check item1"for="curly">Curly<input type="radio"  name="hair_pattern" value="curly" id="curly" {% ifequal 'curly' fields.hair_pattern %} checked {% endifequal %}>
+														<span class="checkmark"></span> </label>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item2"for="straight">Straight<input type="radio"  name="hair_pattern" value="straight" id="straight" {% ifequal 'straight' fields.hair_pattern %} checked {% endifequal %}>
+														<span class="checkmark"></span> </label>
+												</div>
+											</div>
+										</div>
+						</div>
+						<div class="col-md-6">	        
+							 <h4 class="phy tint">Physique</h4>
+						    			<div class="physique">
+							               	<div class="row">
+							               		<div class="col-md-3">
+													<label class="check item1"for="slim">Slim<input type="radio"  name="physique" value="slim" id="slim" {% ifequal 'slim' fields.physique %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item2"for="average">Average<input type="radio"  name="physique" value="average" id="average" {% ifequal 'average' fields.physique %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item3"for="athletic">Athletic<input type="radio"  name="physique" value="athletic" id="athletic" {% ifequal 'athletic' fields.physique %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item4"for="heavy">Heavyset<input type="radio"  name="physique" value="heavy" id="heavy" {% ifequal 'heavy' fields.physique %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label>
+												</div>
+											</div>
+							            </div>
+						</div>
+						<div class="col-md-6">	        
+							  <h4 class="hair_len tint">Hair length<h4>
+						    			<div class="hair_length">
+							               	<div class="row">
+							               		<div class="col-md-3">
+													<label class="check item1"for="long">Long<input type="radio"  name="hair_length" value="long" id="long" {% ifequal 'long' fields.hair_length %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label>
+												</div>
+							               		
+							               		<div class="col-md-3">
+													<label class="check item2"for=chin_length>Chin length<input type="radio"  name="hair_length" value=chin_length id=chin_length {% ifequal 'chin_length' fields.hair_length %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label></td>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item3"for="short">Short<input type="radio"  name="hair_length" value="short" id="short" {% ifequal 'short' fields.hair_length %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label></td>
+												</div>
+							               		<div class="col-md-3">
+													<label class="check item4"for="blad">bald<input type="radio"  name="hair_length" value="blad" id="bald" {% ifequal 'bald' fields.hair_length %} checked {% endifequal %}>
+													<span class="checkmark"></span> </label></td>		
+												</div>
+											</div>
+							            </div>  
+						</div> -->
+					</div>
+				
+
+		            <div id="form" class="skillsform">
+			            <form action="/regskills2/" method="post" enctype="multipart/form-data" onsubmit=" return validateForm()">
+			           	 {% csrf_token %}
+			            <form action="/regskills/" method="post" enctype="multipart/form-data" onsubmit=" return validateForm()">
+			            	                              <!-- <br> -->
+				            <center>
+								<div style="padding-top: 50px;">
+									<a href=""><button class="ccbtn" style="margin-right: 10px;">Back</button></a>
+									<input type="submit" value = "Next/Skip" class="ccbtn" onclick="submit" style="" />
+								</div>
+							</center>
+			        </div>
+		           </div>
+	         </form>
+	     </form>
+	 </div>
+
+    <br>
+
+
+
+	<script>
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="col-md-6">   
+	<div class="row">
+		<div class="col-md-6 skill_padding">
+				<label class="hair_pat tint">Hair pattern</label>
+		</div>
+
+		<div class="col-md-6 skill_item_padding">
+				<div class="skin">
+							<div class="col-md-12 skill_padding_inner">
+									<label class="check item1"for="curly">Curly<input type="radio"  name="hair_pattern" value="curly" id="curly" {% ifequal 'curly' fields.hair_pattern %} checked {% endifequal %}>
+										<span class="checkmark"></span> </label>
+							</div>
+						
+
+						
+							<div class="col-md-12 skill_padding_inner">
+									<label class="check item2"for="straight">Straight<input type="radio"  name="hair_pattern" value="straight" id="straight" {% ifequal 'straight' fields.hair_pattern %} checked {% endifequal %}>
+										<span class="checkmark"></span> </label>
+							</div>
+
+						
+				</div>
+		</div>
+	</div>
+</div> -->

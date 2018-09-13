@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="css/registration.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Filmloop</title>
+	<link rel="stylesheet" href="css/jQuery-File-Upload/style.css">
+	<!-- blueimp Gallery styles -->
+	<link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+	<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+	<link rel="stylesheet" href="css/jQuery-File-Upload/jquery.fileupload.css">
+	<link rel="stylesheet" href="css/jQuery-File-Upload/jquery.fileupload-ui.css">
+	<!-- CSS adjustments for browsers with JavaScript disabled -->
+	<noscript><link rel="stylesheet" href="css/jQuery-File-Upload/jquery.fileupload-noscript.css"></noscript>
+	<noscript><link rel="stylesheet" href="css/jQuery-File-Upload/jquery.fileupload-ui-noscript.css"></noscript>
+
+		 <style type="text/css">
+
+		 @font-face{
+			 font-family: "toptext";
+			 src: url("../fonts/Montserrat-Medium.otf");
+		 }
+
+		@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+		body {
+			/* background: white; */
+		/*	color: #f8ae45;*/
+			font-weight: bold;
+			font-size: 30px;
+			font-family: 'toptext';
+			color: #023749;
+			text-transform: uppercase;
+			margin:0;
+			padding:0;
+			text-align: center;
+			
+		}
+
+		.ccbtn{
+    display:inline-block;
+		border: 1px solid rgb(19,163,153);
+		border-radius: 3px;
+    background: white; 
+    color:rgb(19,163,153);
+    font-size: 15px;
+    padding:12px 25px;
+    cursor:pointer;
+    text-decoration:none;
+	font-weight:;
+
+  }
+  .ccbtn:hover{
+  
+	background:rgb(19,163,153);
+	color: white;
+  }
+		#final_touch{
+			color: rgb(19,163,153);
+			text-transform: capitalize;
+			font-size: 20px;
+			font-weight: lighter;
+		}
+		img {
+			width:250px;
+			height:300px;
+			max-width: 500px;
+			max-height: 500px;
+			object-fit:cover;
+			opacity: 1;
+		  display: block;
+		  width: 100%;
+		  transition: ease;
+		  backface-visibility: hidden;
+		}
+
+		.col-md-4 {
+			padding-bottom: 20px;
+		}
+		.ccform{
+			position: relative;
+			bottom: 0;
+		}
+		.container{
+			background: #fff;
+			border-radius: 10px;
+			width: 80%;
+		}
+		.subimg:hover{
+			background: 	#3CB371;
+
+			}
+		
+
+		/* footer {
+		  background: #222222;
+		  position: static;
+	   		right: 0;
+	  		bottom: 0;
+	  		left: 0;
+		  padding: 10px;
+		  font-size: 20px;
+		  color: #777;
+		  margin-top: 20px;
+		} */
+	
+		.middle {
+		  transition: ease;
+		  opacity: 0;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+
+		.col-md-4 {
+			position: relative;
+		}
+
+		.col-md-4:hover img {
+		  opacity: 0.3;
+		}
+
+		.col-md-4:hover .middle {
+		  opacity: 1;
+		  cursor: pointer;
+		}
+
+		.text {
+		  background-color: grey;
+		  color: white;
+		  font-size: 16px;
+		  padding: 16px 32px;
+		}
+@media screen and (max-width: 930px) {
+	footer {
+		position: static;
+	}
+}
+		a, a:hover {
+			text-decoration: none;
+		}
+		.btn-main {
+			width: 132px;
+		}
+		#gallery-photo-add {
+		    display: none;
+		}
+		/* .custom-file-upload {
+		    border: 1px solid #ccc;
+		    display: inline-block;
+		    padding: 6px 12px;
+		    cursor: pointer;
+		} */
+
+				.custom-file-upload{
+		display:block;
+		/* width: 20%; */
+		/* align-content: center; */
+		border: 1px solid rgb(66, 133, 244);
+		border-radius: 10px;
+    background: white; 
+    color:rgb(66, 133, 244);
+    font-size: 15px;  
+    cursor:pointer;
+    text-decoration:none;
+	font-weight:bolder;
+	display: inline-block;
+		    padding: 6px 12px;
+	
+
+  }
+  .custom-file-upload:hover{
+  
+	background:rgb(66, 133, 244);
+	color: white;
+  }
+
+	.top{
+    background-color: #023749;
+    color: #ffffff;
+    height: 100px;
+    font-family: book;
+    font-size: 40px;
+    text-align: start;
+    width: auto;
+    
+	}
+	.top img{
+		width: auto;
+		height: auto;
+		opacity: 100%;
+	}
+
+	
+	.side-bar{
+    position: fixed;
+    top: 20vh;
+    left: auto; 
+    right: 20px; 
+    padding: 20px; 
+    z-index: 4
+  }
+  #complete{
+    color: rgb(66, 133, 244);
+    font-size: 15px;
+	text-align: center;  
+	font-weight: bold;
+	z-index: 5;
+	text-transform: capitalize;
+
+
+			/* font-weight: bold; */
+			/* font-size: 30px; */
+			/* font-family: 'toptext'; */
+			/* color: #023749; */
+			/* text-transform: uppercase; */
+			/* margin:0;
+			padding:100; */
+			/* text-align: center; */
+	/* text-shadow:1px 1px solid  white; */
+  }
+
+  .progress {
+    background-color: rgb(66, 133, 244);
+    font-family: "toptext";
+    width: 100px; 
+    height: 100px;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    
+   
+  }
+		
+	</style>
+
+</head>
+
+<body>
+
+	<div class="nav">
+           
+		<div class="container-fluid top">
+		  <div style="width: 100%px; height:10px;"></div>
+				<img src="images/ff_Webp.net-resizeimage.png">
+		 		<!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
+		</div>
+	   
+	</div> 
+	
+	<div class="side-bar">
+		<div class="progress"><label>80%</label></div>
+		
+    <div id='complete'>Complete your<br>profile</div>
+    </div>
+
+	<div class="container">
+		<div class="form-group" id="uploder">
+			<br>
+			<p id="final_touch" >One final touch</p>
+			
+			<p>Upload photos</p>
+			
+			<h4 style="text-decoration:underline; text-decoration-color:rgb(19,163,153);">Finish up your account with your pictures</h4>
+			<br>
+			<form style="padding-left: 1vw;" action="/regimage/" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<label for="gallery-photo-add" class="custom-file-upload">
+				    <i class="fa fa-cloud-upload"></i> Custom Upload
+				</label>
+				<input type="file" id="gallery-photo-add" class="upload" name="files" multiple/>
+				<br>
+				<div class="gallery row"></div>
+				<!-- <textarea type="" id="imagelist" name="imagelist"></textarea> -->
+			</form>
+		</div>
+	</div>
+
+				<div  style="padding-top: 50px;">
+					<a href=""><button class="ccbtn" >Back</button></a>
+				<a href=""><button class="ccbtn" >Submit</button></a>
+				</div>
+
+
+
+	
+	
+<!-- Whole script for image preview alone -->
+<script type="text/javascript">
+	$(function() {
+		var count = 0;
+    // Multiple images preview in browser
+    var imagesPreview = function(input, placeToInsertImagePreview) {
+
+        if (input.files) {
+            var filesAmount = input.files.length;
+            // $("div.col-md-4").remove();
+
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    $($.parseHTML('<div>')).attr('class', 'col-md-4 image'+(count)).appendTo(placeToInsertImagePreview);
+                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo('div.image'+(count));
+                    $($.parseHTML('<div>')).attr('class', 'middle middle'+(count)).appendTo('div.image'+(count));
+                    $($.parseHTML('<a>')).attr('class', 'removeimage'+(count)).appendTo('div.middle'+(count));
+                    $($.parseHTML('<div>')).attr('class', 'text text'+(count)).appendTo('a.removeimage'+(count));
+                    $('a.removeimage'+(count)).attr('onclick', 'return removeimage('+(count)+');')
+                    $($.parseHTML('Remove')).appendTo('div.text'+(count));
+                    $('#imagelist').val($('#imagelist').val()+' '+(count)+':'+event.target.result+'$');
+                    count++;
+                }
+
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+
+    };
+
+    $('#gallery-photo-add').on('change', function() {
+        imagesPreview(this, 'div.gallery');
+    });
+
+});
+    function removeimage(i) {
+    	$('div.image'+i).remove();
+    	var str = $('#imagelist').val();
+    	do {
+    		str = str.substr(str.indexOf(' '));
+    		if(str.charAt(1) == i) {
+		    	str = str.substr(0,str.indexOf('$') + 1);
+		    	$('#imagelist').val($('#imagelist').val().replace(str,''));
+		    	break;
+    		}
+    		str = str.substr(1);
+    	}
+    	while(str.length != 0);
+		// alert($('#imagelist').val().split(" ").length - 1);
+    }
+</script>
+
+</body>
+</html>

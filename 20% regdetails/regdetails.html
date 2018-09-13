@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+      <link rel="stylesheet" href="css/regdetails.css">
+<!--     	<link rel="stylesheet" type="text/css" href="/static/css/registration.css">
+ -->    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<title>Filmloop</title>
+
+</head>
+
+<body>
+
+	 <div class="nav">
+           
+            <div class="container-fluid top">
+              <div style="width: 100%px; height:10px;"></div>
+        <img src="images/ff_Webp.net-resizeimage.png">
+             <!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
+            </div>
+           
+    </div> 
+
+<div>
+    <div class="side-bar">
+        <div class="progress"><label>20%</label></div>
+    <div id='complete'>Complete your<br>profile</div>
+    </div>
+  <div class="container">
+
+
+    <div class="ccheader">
+      <h1 class="talk">LET'S TALK ABOUT YOU</h1>	
+    </div>
+    
+  
+  <div class="wrapper">
+      <form method="post" action="/regdetails/" class="ccform" id="details">
+      {% csrf_token %}
+      <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-user fa-3x"></i></span>
+          <input class="ccformfield" type="text" placeholder="Full Name" name = "name" required value="{% if fields.name %} {{ fields.name }} {% endif %}">
+      </div>
+       <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-map-marker fa-3x"></i></span>
+          <input class="ccformfield" type="text" placeholder="Place" name = "place" required value="{% if fields.place %} {{ fields.place }} {% endif %}">
+      </div>
+      <div class="ccfield-prepend">
+          <span class="ccform-addon"><!-- <i class="fa fa-map-marker fa-3x"> --><i class="fa fa-instagram fa-3x"></i></span>
+          <input class="ccformfield" type="text" placeholder="Instagram" name = "instagram" value="{% if fields.instagram %} {{ fields.instagram }} {% endif %}" >
+      </div>
+      <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-mobile-phone fa-3x"></i></span>
+          <input class="ccformfield" type="number" placeholder="Phone number"  name = "phone1" required value="{{ fields.phone1 }}">
+      </div>
+      <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-mobile-phone fa-3x"></i></span>
+          <input class="ccformfield" type="number" placeholder="Emergency contact number"  name = "phone2" required value="{{ fields.phone2 }}">
+      </div>
+      <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-clock-o fa-3x"></i></span>
+          <input class="ccformfield" type="number" placeholder="Age" name = "age" required min="0" max="125" 
+           value = "{{ fields.age }}">
+      </div>
+    <div class="ccfield-prepend">
+          <span class="ccform-addon"><i class="fa fa-genderless fa-3x"></i></span>
+  
+  
+  
+      <select class="ccformfield" name="gender" form="details" required value="{{ fields.gender }}">
+  
+        <option value>Gender</option>
+        <option {% if fields.gender == "Male" %} selected {% endif %} value="Male">Male</option>
+        <option {% if fields.gender == "Female" %} selected {% endif %} value="Female">Female</option>
+        <option {% if fields.gender == "Other" %} selected {% endif %} value="Other">Other</option>
+      </select>
+    </div> 
+        <span class="ccform-addon"><i class="fa fa-television fa-3x"></i></span>
+    <dl class="dropdown"> 
+      
+        <dt>
+        <a style="text-decoration: none;">
+          <span class="hida ccformfield" style="width: 91.9%;">Interests</span>    
+          <span><p class="multiSel ccformfield" style="display: none; left: 79.5px;">Interests: </p></span>
+          <input type="hidden" name="Interests" id="interests" value="{% if fields.interests %} {{ fields.interests }} {% endif %}">
+        </a>
+        </dt>
+      
+        <dd>
+            <div class="mutliSelect">
+                <ul>
+                    <li>
+                        <input type="checkbox" value="film" name="film" />Film</li>
+                    <li>
+                        <input type="checkbox" value="theatre" name="theatre" />Theatre</li>
+                    <li>
+                        <input type="checkbox" value="ramp" name="ramp" />Ramp</li>
+                    <li>
+                        <input type="checkbox" value="host" name="host" />Host</li>
+                   
+                </ul>
+            </div>
+        </dd>
+    </dl>
+  
+      <div class="ccfield-prepend">
+          <center><input class="ccbtn" type="submit" value="NEXT" style="margin-top: 70px;"></center>
+      </div>
+      </form>
+  </div>
+  
+  </div>
+</div>
+<!-- <div class="ccform" style="margin-top: 40px;">
+  <h4>Account progress</h4>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+      20% Completed
+    </div>
+  </div>
+</div> -->
+
+
+  
+<script>
+$(".dropdown dt a").on('click', function() {
+  $(".dropdown dd ul").slideToggle('fast');
+  $(".mutliSelect").fadeIn();
+});
+
+$(".dropdown dd ul li a").on('click', function() {
+  $(".dropdown dd ul").hide();
+});
+
+function getSelectedValue(id) {
+  return $("#" + id).find("dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+});
+
+$('.mutliSelect input[type="checkbox"]').on('click', function() {
+
+  var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+    title = $(this).val() + ",";
+
+  if ($(this).is(':checked')) {
+    var html = '<span title="' + title + '">' + title + '</span>';
+    $('.multiSel').append(html);
+    $(".hida").hide();
+    $('.multiSel').show();
+    var interests = html.substring(html.indexOf(">") + 1);
+    interests = interests.substring(0, interests.indexOf('<'));
+    $("#interests").val($("#interests").val()+interests);
+  } else {
+    $('span[title="' + title + '"]').remove();
+    var ret = $(".hida");
+    $('.dropdown dt a').append(ret);
+    if(!$('.multiSel').children().length) {
+	    $(".hida").show();
+	    $('.multiSel').hide();
+  	}
+    $("#interests").val($("#interests").val().replace(title,''));
+
+  }
+  // alert($(".multiSel").val());
+  // $("#interests").val(interests);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+	<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link  rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/regskills.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Filmloop</title>
+
+
+<style>
+/* The container */
+
+@font-face{
+  font-family: toptext;
+  src: url("../fonts/Montserrat-Medium.otf");
+}
+
+.check {
+	display: block;
+	border:2px solid rgb(19,163,153);
+	color: rgb(19,163,153);
+	font-size: 13px;
+	border-radius: 3px;
+	position: relative;
+	text-align: center;
+	/* padding-left: 35px; */
+	padding-bottom:15px;
+	padding-top:15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check input {
+	position: absolute;
+	/* background-color: red; */
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+     height: 100%; 
+    width: 100%;
+    /* background-color: #eee;  */
+	/* border: 1px solid lightgrey; */
+	border-radius:inherit;
+	z-index: 0;
+}
+
+/* On mouse-over, add a grey background color */
+/* .check:hover input ~ .checkmark {
+	background-color:yellow;
+	color:white;
+} */
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked ~ .checkmark{
+	background-color: rgb(19,163,153);
+	/* color: white; */
+	/* z-index: -1; */
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+/* .performance_skills, .work_history {
+	text-transform: uppercase;
+
+	background-color: #eee;
+	padding: 3px;
+} */
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+   /* border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: 10px;*/
+}
+.achivement{
+	border-top: 10px;
+}
+.achivement{
+	border-top: 40px;
+}
+/* .language_skills, .Dancing_skills, .Athletic_skills, .performance_skills, .work_history{
+	
+	font-size: 24px;
+	text-transform: uppercase;
+	border-radius: 5px;
+} */
+.skill_header{
+	/* background-color: #000; */
+	text-align: center;
+	font-family: toptext;
+	text-transform: uppercase;
+	color:#023749;
+	
+	/* font-size: 24px; */
+	padding-top: 2px;
+	margin-bottom: 1px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	border-radius: 5px 5px 0px 0px;
+}
+label{
+	font-size: 20px;
+	
+} 
+ .toplevel{
+	margin-top: 40px;
+	text-align: center;
+  font-family: toptext;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4em;
+  line-height: 1.3;
+  color:#023749;
+} 
+
+/* .tell_us{
+	
+	border:1px solid black;
+	width: 90px;
+	padding: 2px;
+	margin-bottom: -8px;
+	margin-top: 30px;
+} */
+.option{
+	margin-left: 2px;
+}
+.row{
+	
+	
+	margin-left: -5px;
+	
+	font-family: toptext;
+	/* font-size: 24px; */
+	text-transform: uppercase;
+}
+.tell_us{
+	margin-left: 0px;
+}
+
+.tell_us_textbox{
+	width: 100%;
+    font-size: 18px; 
+    border:2px solid black;
+}
+/* footer {
+  background: #222222;
+  
+   right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 20px;
+  color: #777;
+  margin-top: 20px;
+} */
+/* .ccbtn {
+	display: inline;
+} */
+/* a, a:hover {
+	text-decoration: none;
+} */
+</style>
+</head>
+
+<body>
+
+	<div class="nav">
+           
+		<div class="container-fluid top">
+		  <div style="width: 100%px; height:10px;"></div>
+	<img src="images/ff_Webp.net-resizeimage.png">
+		 <!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
+		</div>
+	   
+</div> 
+
+<div class="side-bar">
+		<div class="progress"><label>40%</label></div>
+		
+    <div id='complete'>Complete your<br>profile</div>
+    </div>
+        <div class="container">
+            <div id="text">
+              <center class="toplevel">Help us know you better!</h1></center>
+              <!-- <div style="height: 1px; width: 100px; background-color: black"></div> -->
+              <!-- <h4>Choose your skills here.:</h4> -->
+              <br>
+            </div>
+            <div id="form" class="skillsform">
+            <form action="/regskills/" method="post" enctype="multipart/form-data" onsubmit=" return validateForm()">
+            	  {% csrf_token %}
+	              <div class="language_skills">
+	               <div class="skill_header"><h4><label>Linguistic Skills</label></h4></div>   
+<!-- 	               <input type="hidden" name="languages" id="languages" value="{% if fields.languages %} {{ fields.languages }} {% endif %}">
+ -->	               <div id="language_skills" class="options">
+
+	               	<div class="row">
+	               		<div class="col-md-2">
+		                    <label for="english" class="check">English<input type="checkbox" id="english" name="english" value="1" {% if fields.english %} checked {% endif %}   /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="hindi" class="check">Hindi<input type="checkbox" id="hindi" name="hindi" value="1" {% if fields.hindi %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="malayalam" class="check">Malayalam<input type="checkbox" id="malayalam" name="malayalam" value="1" {% if fields.malayalam %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="tamil" class="check">Tamil<input type="checkbox" id="tamil" name="tamil" value="1" {% if fields.tamil %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="kannada" class="check">Kannada<input type="checkbox" id="kannada" name="kannada" value="1" {% if fields.kannada %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="telugu" class="check">Telugu<input type="checkbox" id="telugu" name="telugu" value="1" {% if fields.telugu %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="bengali" class="check">Bengali<input type="checkbox" id="bengali" name="bengali" value="1" {% if fields.bengali %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="marathi" class="check">Marathi<input type="checkbox" id="marathi" name="marathi" value="1" {% if fields.marathi %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="oriya" class="check">Oriya<input type="checkbox" id="oriya" name="oriya" value="1" {% if fields.oriya %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		            </div>
+	                </div>
+	            </div>
+	            <br>
+
+	              <div class="Musical_skills">
+	               <div class="skill_header"><h4><label>Musical Skills</label></h4></div>   
+	               <div id="music_skills" class="options">
+	               	<div class="row">
+
+	               		<div class="col-md-2">
+		                    <label for="drums" class="check">Drums<input type="checkbox" id="drums" name="drums" value="1" {% if fields.drums %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="guitar" class="check">Guitar<input type="checkbox" id="guitar" name="guitar" value="1" {% if fields.guitar %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="piano" class="check">Piano<input type="checkbox" id="piano" name="piano" value="1" {% if fields.piano %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="trumpet" class="check">Trumpet<input type="checkbox" id="trumpet" name="trumpet" value="1" {% if fields.trumpet %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="violin" class="check">Violin<input type="checkbox" id="violin" name="violin" value="1" {% if fields.violin %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="flute" class="check">Flute<input type="checkbox" id="flute" name="flute" value="1" {% if fields.flute %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="harmonica" class="check">Harmonica<input type="checkbox" id="harmonica" name="harmonica" value="1" {% if fields.harmonica %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="organ" class="check">Organ<input type="checkbox" id="organ" name="organ" value="1" {% if fields.organ %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="thabala" class="check">Thabala<input type="checkbox" id="thabala" name="thabala" value="1" {% if fields.thabala %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		            </div>
+	                </div>
+	            </div>
+	            <br>
+	            <div class="Dancing_skills">
+	               <div class="skill_header"><h4><label>Dancing Skills</label></h4></div>   
+	               <div id="music_skills" class="options">
+	               	<div class="row">
+	               		<div class="col-md-2">
+		                    <label for="bharatanatyam" class="check">Bharatanatyam<input type="checkbox" id="bharatanatyam" name="bharatanatyam" value="1" {% if fields.bharatanatyam %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="kathak" class="check">Kathak<input type="checkbox" id="kathak" name="kathak" value="1" {% if fields.kathak %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="kathakali" class="check">Kathakali<input type="checkbox" id="kathakali" name="kathakali" value="1" {% if fields.kathakali %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		                <div class="col-md-2">
+		                    <label for="salsa" class="check">Salsa<input type="checkbox" id="salsa" name="salsa" value="1" {% if fields.salsa %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		                 <div class="col-md-2">
+		                    <label for="free_style" class="check">Free Style<input type="checkbox" id="free_style" name="free_style" value="1" {% if fields.free_style %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		                 <div class="col-md-2">
+		                    <label for="hip_hop" class="check">Hip Hop<input type="checkbox" id="hip_hop" name="hip_hop" value="1" {% if fields.hip_hop %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="kuchipudi" class="check">Kuchipudi<input type="checkbox" id="kuchipudi" name="kuchipudi" value="1" {% if fields.kuchipudi %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="odissi" class="check">	Odissi<input type="checkbox" id="odissi" name="odissi" value="1" {% if fields.odissi %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="western" class="check">western<input type="checkbox" id="western" name="western" value="1" {% if fields.western %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="otherclassical" class="check">Other classicals<input type="checkbox" id="otherclassical" name="otherclassical" value="1" {% if fields.otherclassicals %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		
+		            </div>
+	                </div>
+	            </div>
+	            <br>
+	            <div class="performance_skill">
+	              <div class="skill_header"><h4><label>Performance Skills</label></h4></div>    
+	              <div id="demo" class="options"> 
+	               	<div class="row">
+	               		<div class="col-md-2">
+		                    <label for="comedian" class="check">Comedian<input type="checkbox" id="comedian" name="comedian" value="1" {% if fields.comedian %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="dancing" class="check">Dancing<input type="checkbox" id="dancing" name="dancing" value="1" {% if fields.dancing %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="host" class="check">Host<input type="checkbox" id="host" name="host" value="1" {% if fields.host %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="singing" class="check">Singing<input type="checkbox" id="singing" name="singing" value="1" {% if fields.singing %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="stunts" class="check">Stunts<input type="checkbox" id="stunts" name="stunts" value="1" {% if fields.stunts %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		
+	               		<div class="col-md-2">
+		                    <label for="juggling" class="check">Juggling<input type="checkbox" id="juggling" name="juggling" value="1" {% if fields.juggling %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="magic" class="check">Magic<input type="checkbox" id="magic" name="magic" value="1" {% if fields.magic %} checked {% endif %} /> <span class="checkmark"> </span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+		                    <label for="martial_arts" class="check">Martial Arts<input type="checkbox" id="martial_arts" name="martial_arts" value="1" {% if fields.martial_arts %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+						</div>	                      
+					</div>
+	                </div>
+	            </div>
+	            <br>
+	            <div class="Athletic_skills">
+	             <div class="skill_header"> <h4><label>Athletic Skills</label></h4></div>   
+	              <div id="dmo" class="options">
+		            <div class="row">
+	               		<div class="col-md-2">
+	                    <label for="baseball" class="check">Baseball<input type="checkbox" id="baseball" name="baseball" value="1" {% if fields.baseball %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="basketball" class="check">Basketball<input type="checkbox" id="basketball" name="basketball" value="1" {% if fields.basketball %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="boxing" class="check">Boxing<input type="checkbox" id="boxing" name="boxing" value="1" {% if fields.boxing %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="football" class="check">Football<input type="checkbox" id="football" name="football" value="1" {% if fields.football %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="surfing" class="check">Surfing<input type="checkbox" id="surfing" name="surfing" value="1" {% if fields.surfing %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="aerobics" class="check">Aerobics<input type="checkbox" id="aerobics" name="aerobics" value="1" {% if fields.aerobics %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="cycling" class="check">Cycling<input type="checkbox" id="cycling" name="cycling" value="1" {% if fields.cycling %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="swimming" class="check">Swimming<input type="checkbox" id="swimming" name="swimming" value="1" {% if fields.swimming %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="tennis" class="check">Tennis<input type="checkbox" id="tennis" name="tennis" value="1" {% if fields.tennis %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="volleyball" class="check">Volleyball<input type="checkbox" id="volleyball" name="volleyball" value="1" {% if fields.volleyball %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="wrestling" class="check">Wrestling<input type="checkbox" id="wrestling" name="wrestling" value="1" {% if fields.wrestling %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="yoga" class="check">Yoga<input type="checkbox" id="yoga" name="yoga" value="1" {% if fields.yoga %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		                <div class="col-md-2">
+	                    <label for="skating" class="check">Skating<input type="checkbox" id="skating" name="skating" value="1" {% if fields.skating %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		                <div class="col-md-2">
+	                    <label for="track_and_field" class="check">Track and field<input type="checkbox" id="track_and_field" name="track_and_field" value="1" {% if fields.track_and_field %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+		            </div>
+	                </div>
+	            </div>
+	            <br>
+	            <div class="work_historys">
+	              <div class="skill_header"><h4><label>Work history</label></h4></div>   
+	              <div id="work" class="options">
+		            <div class="row">
+	               		<div class="col-md-2">
+	                    <label for="commercial" class="check">Commercial<input type="checkbox" id="commercial" name="commercial" value="1" {% if fields.commercial %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="film" class="check">Film<input type="checkbox" id="film" name="film" value="1" {% if fields.film %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="television" class="check">Television<input type="checkbox" id="television" name="television" value="1" {% if fields.television %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="theater" class="check">Theater<input type="checkbox" id="theater" name="theater" value="1" {% if fields.theater %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="voice_over" class="check">Voice over<input type="checkbox" id="voice_over" name="voice_over" value="1" {% if fields.voice_over %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="short_film" class="check">Short film<input type="checkbox" id="short_film" name="short_film" value="1" {% if fields.short_film %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	               		<div class="col-md-2">
+	                    <label for="radio" class="check">Radio<input type="checkbox" id="radio" name="radio" value="1" {% if fields.radio %} checked {% endif %} /> <span class="checkmark"></span><br></label>
+		                </div>
+	                </div>
+	                  </div>
+                 </div>
+                 <div class="achivement" style="margin-top: 30px;">
+	              <div class="skill_header" style="margin-bottom: -10px;"><h4><label>Tell us more about <b>YOU</b></label></h4></div>   
+<!--                  	<div class="tell_us"><h4><label style="margin-left: 2px;" required>Tell us more</label></h4>	</div>
+ -->        	<!-- <textarea rows="6" style="width: 100%; font-size: 18px; border-radius: 0px 5px 5px 5px;" placeholder="What other skills make you unique? " name="tell_us_more" value="asd"></textarea>  -->
+        	<textarea rows="6"  name="tell_us_more" class=tell_us_textbox >{% if fields.tell_us_more %} {{fields.tell_us_more}} {% endif %}</textarea>
+
+
+                 </div>
+				 <br>
+				 <div  style="padding-top: 50px;">
+
+				<button class="ccbtn" style="margin-right: 10px;">Back</button>
+				 <input type="submit" value = "Next/Skip" class="ccbtn" onclick="submit" /></div>
+	            
+             </form>
+            </div>
+           </div>
+
+    <br>
+
+
+
+	
+<script type="text/javascript">
+
+	// function getSelectedValue(id) {
+	//   return $("#" + id).find("dt a span.value").html();
+	// }
+
+	$('.language_skills input[type="checkbox"]').on('click', function() {
+
+	  var title1 = $(this).closest('.language_skills').find('input[type="checkbox"]').val(),
+	    title1 = $(this).val() + ",";
+
+	  if ($(this).is(':checked')) {
+	    $("#languages").val($("#languages").val()+title1);
+	  } else {
+	    $("#languages").val($("#languages").val().replace(title1,''));
+	  }
+	  // alert($(".multiSel").val());
+	  // $("#interests").val(interests);
+	});
+
+</script>
+</body>
+</html>
