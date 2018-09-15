@@ -1,0 +1,246 @@
+/*/////////////////DASHBOARD//////////////////////////*/
+
+
+@font-face {
+  font-family:book;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf");
+ }
+
+ @font-face {
+  font-family:head;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf");
+ }
+
+@font-face{
+  font-family: int-txt ;
+  src:url('../../../assets/fonts/Montserrat-Regular.otf');
+}
+
+@font-face{
+  font-family: int-txt-headers ;
+  src:url('../../../assets/fonts/montserrat/Montserrat-SemiBold.otf');
+}
+ .headerStyle {
+   font-size:;
+   font-family: book;
+   color: #023749;
+   font-weight:;
+ }
+
+ .internal-headers{
+   
+   font-family: int-txt ;
+   color: #023749;
+ }
+
+ .content-text-headers{
+   font-family: int-txt-headers ;
+   color: #023749;
+   font-weight: bold;
+ }
+
+ .content-text{
+  font-family: int-txt ;
+  color: #023749;
+}
+
+ #best-matches{
+   font-size: 50px;
+   color: #023749;
+   font-family: book;
+   text-align: center;
+ }
+
+ .dummy-pfp{
+   background-color: #023749;
+   width: 300px;
+   height: 450px;
+
+ }
+
+ .dummy-search{
+  background-color: #023749;
+  width: 210px;
+  height: 210px;
+  opacity: 0.97;
+
+}
+
+ .dummy-img{
+  
+  background-color: #023749;
+  background-size: 150px 150px;
+  border-left: 20px;
+  border-right: 20px;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  width: 150px;
+  height: 150px;
+ }
+
+ .dummy-big {
+  background-color: #023749;
+  background-size: 150px 150px;
+  border-left: 20px;
+  border-right: 20px;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  width: 175px;
+  height: 175px;
+  
+ }
+
+ .borders{
+   border-left: 13%;
+   border-right: 13%;
+ }
+
+ .top{
+   background-color: #023749;
+   color: #ffffff;
+   height: 100px;
+   font-family: book;
+   font-size: 40px;
+   text-align: start;
+   width: auto;
+   
+ }
+
+ #mem-range, #mem-range-our-pricing{
+  width: 200px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #023749;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background:rgb(50, 125, 175);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: rgb(50, 125, 175);
+  cursor: pointer;
+}
+
+.styled-textbox{
+  border-width:1px 1px 1px 1px;
+  border-color: #023749;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  font-family: int-txt;
+  
+}
+
+.minmax-textbox{
+  width: 32px;
+  height: 15px;
+  
+
+}
+
+.dropdown{
+  position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+  font-family: int-txt;
+  color: #023749;
+  display: none;
+  position: absolute;
+  /* background-color: #ffffff; */
+  width: auto;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 1;
+
+
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+#follow-us{
+  font-family: book;
+  color: #023749;
+  font-weight:;
+  color:white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.underlined-links{
+  font-size: 20px;
+  font-family: book;
+  
+  color: #023749;
+  text-decoration: underline;
+  font-weight: ;
+  
+}
+
+
+#upload-background{
+  /* background-image: url('../../../assets/BUTTONS-ICONS/Upload_picture.png'); */
+  background-repeat: no-repeat;
+}
+
+#hover-on-pics{
+  font-size: 15px;
+  font-family: book;
+  color: #023749;
+  font-weight:;
+
+}
+
+.sm-border{
+  height: 20px;
+ background-color: #ffffff;
+}
+
+.lg-border{
+  height: 30px;
+ background-color: #ffffff;
+}
+
+.pic-border{
+  height: 80px; 
+  background-color: #ffffff;
+}
+ 
+
+.dummy-img-select{
+  
+  background-color: #023749;
+  background-size: 150px 150px;
+  border-left: 20px;
+  border-right: 20px;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  width: 150px;
+  height: 150px;
+ }
+
+ .dummy-img-select:hover {
+   
+ }
+
