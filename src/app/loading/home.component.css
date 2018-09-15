@@ -1,7 +1,315 @@
+@font-face {
+  font-family:book;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Regular.otf");
+ }
+
+ @font-face {
+  font-family:head;
+  src: url("../../../assets/fonts/bebas_neue/BebasNeue_Bold.otf");
+ }
+
+ h1{
+   font-size: 70px;
+ }
+
+.title-font-head{
+  font-family: head;
+}
+.font-head{
+  font-family: head;
+  font-size: 30px;
+}
+
 #filmloop{
   margin: 0 auto;
   text-align: center;
+  font-family: head;
 }
 .film{
   letter-spacing: 4px;
 }
+.title-icon{
+  margin-top: 15px;
+}
+
+/*---------------------*/
+#intelligent-casting{
+  background-color: #3195B7;
+  color: white;
+  font-family: head;
+}
+#intelligent-casting > div > button{
+  font-size: 20px;
+  margin-top: 400px;
+  background-color: transparent;
+
+}
+/*---------------------*/
+#actor-or-agent{
+  background-color: #023749;
+  color: white;
+  background-image: url("../../../assets/img/filmloop_mid.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+}
+#actor-or-agent > div > img{
+  height: 75px;
+}
+#actor,#agent{
+}
+#actor{
+  float: left;
+  font-family:head;
+  top: 15%;
+  left: 12%;
+
+}
+#agent{
+  float: right;
+  font-family:head;
+  top: 50%;
+}
+/*---------------------*/
+#what-we-do{
+  background-color: #023749;
+  font-family:head;
+  color: white;
+}
+#wwd-text{
+  text-transform: capitalize;
+  font-family:book;
+  font-size: 20px;
+  text-align: justify;
+}
+#ready-to-discover{
+  text-align: center;
+  font-size: 28px;
+  font-family: book;
+}
+#img_before_prices{
+  /* background-image: url("../../../assets/img/BENEFITS_DISPLAY/1-display.png");
+  background-position: center; */
+  background-color: #023749;
+  padding-bottom: 50px;
+}
+#img_before_prices > img{
+  width: inherit;
+}
+#img_before_prices2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#knowmore{
+  font-family: book;
+}
+.wwd-btn{
+  font-size: 20px;
+  width: 290px;
+}
+/*---------------------*/
+#our-pricing{
+  background-color: #023749;
+  color: white;
+}
+#our-pricing > h2{
+  margin-top: 120px;
+}
+.our-pricing-ques-container-box{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.our-pricing-ques-container{
+  padding: 0 40px;
+}
+/*---------------------*/
+#membership-plan{
+  background-color: #023749;
+  color: white;
+  font-family: head;
+  padding: 10px 10px 50px 10px;
+}
+#membership-plan > div > input, #our-pricing > div > input{
+  display: unset;
+}
+
+.range-labels {
+  list-style: none;
+  display: inline-flex;
+}
+
+.range-labels{
+  padding: 0px;
+  margin-top: 8px;
+}
+
+.range-labels >  li {
+  width: 85px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+#mem-range, #mem-range-our-pricing{
+  width: 200px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: #023749;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: #023749;
+  cursor: pointer;
+}
+.card-container{
+  width: 700px;
+  margin: 0 auto;
+}
+.card{
+  background-color: white;
+  color: #023749;
+  border-radius: 10px;
+  padding: 10px 10px 20px 10px;
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+}
+.card > ul {
+  list-style: none;
+  padding: 0 30px;
+}
+.li-with-fa{
+  display: flex;
+}
+.icon{
+  padding: 0px;
+  margin-right: 10px;
+}
+.fas{
+  font-size: 20px;
+}
+.fa-times{
+  width: 20px;
+  color: red;
+}
+hr{
+  border-top: 4px solid #023749;
+  margin: 10px 0;
+}
+.txt-left{
+  text-align: left;
+}
+.pro-feature-container{
+  position: absolute;
+  width: 100px;
+  clip: rect(-18px,101px,94px,-18px);
+}
+.pro-feature{
+  position: absolute;
+  width: 200px;
+  transform: rotate(-43deg);
+  font-size: 25px;
+  top: 8px;
+  left: -71px;
+  background-color: #047398;
+  color: white;
+}
+.ques-container-box{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ques-container{
+  padding: 0 40px;
+}
+.title{
+  text-align: justify;
+  font-size: 25px;
+}
+.content{
+  text-align: justify;
+}
+/*---------------------*/
+.contact-title, .what-we-do-title, .our-pricing-title{
+  display: inline-flex;
+  height: 80px;
+}
+.contact-title > img, .what-we-do-title > img, .our-pricing-title > img{
+  height: 75px;
+  position: absolute;
+}
+.contact-title > h1, .what-we-do-title > h1, .our-pricing-title > h1{
+  position: absolute;
+}
+.contact-us{
+  background-color: #016C90;
+  color: white;
+  text-align: center;
+}
+.take-input{
+  margin: 5px auto;
+}
+input, textarea{
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 5px 0px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #016C90;
+}
+input::placeholder, textarea::placeholder{
+  color: white;
+}
+textarea{
+  resize: vertical;
+}
+#message{
+  height: 200px;
+}
+button{
+  border-radius: 10px;
+  padding: 5px 40px;
+  background-color: #016C90;
+  color: white;
+}
+#send-btn{
+  margin-top: -5px;
+}
+.social-media{
+  background-color: #023749;
+  color: white;
+  text-align: center;
+  height: 300px;
+}
+.social-media > img{
+  margin: 100px 10px 8px 10px;
+  height: 35px;
+}
+.center{
+  text-align: center;
+}
+
+
