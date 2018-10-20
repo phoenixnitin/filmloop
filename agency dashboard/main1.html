@@ -1,0 +1,655 @@
+<!-- {%load staticfiles%} -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="/static/css/main1.css">-->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+<!-- <script type="text/javascript" src="/static/js/main1.js"></script>-->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- lazyload -->
+  <script type="text/javascript" src="/static/js/jquery.lazyload.js"></script>
+
+  <script>
+  $( function() {
+    $( "#weight-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 230,
+      values: [ 0, 230],
+      slide: function( event, ui ) {
+  $("#weight-min").val(ui.values[ 0 ]);
+  $("#weight-max").val(ui.values[ 1 ]);
+      }
+    });
+  	$("#weight-min").change(function() {
+	    $( "#weight-slider-range" ).slider({
+	      values: [ $("#weight-min").val(), $("#weight-max").val() ]
+	  	});
+    });
+  	$("#weight-max").change(function() {
+	    $( "#weight-slider-range" ).slider({
+	      values: [ $("#weight-min").val(), $("#weight-max").val() ]
+	  	});
+    });
+  $("#weight-min").val($( "#weight-slider-range" ).slider( "values", 0 ));
+  $("#weight-max").val($( "#weight-slider-range" ).slider( "values", 1 ));
+  } );
+   $( function() {
+    $( "#waist-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 70,
+      values: [ 0, 70 ],
+      slide: function( event, ui ) {
+  $("#waist-min").val(ui.values[ 0 ]);
+  $("#waist-max").val(ui.values[ 1 ]);
+      }
+    });
+  	$("#waist-min").change(function() {
+	    $( "#waist-slider-range" ).slider({
+	      values: [ $("#waist-min").val(), $("#waist-max").val() ]
+	  	});
+    });
+  	$("#waist-max").change(function() {
+	    $( "#waist-slider-range" ).slider({
+	      values: [ $("#waist-min").val(), $("#waist-max").val() ]
+	  	});
+    });
+  $("#waist-min").val($( "#waist-slider-range" ).slider( "values", 0 ));
+  $("#waist-max").val($( "#waist-slider-range" ).slider( "values", 1 ));
+  } );
+    $( function() {
+    $( "#chest-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 80,
+      values: [ 0, 80 ],
+      slide: function( event, ui ) {
+  $("#chest-min").val(ui.values[ 0 ]);
+  $("#chest-max").val(ui.values[ 1 ]);
+      }
+    });
+  	$("#chest-min").change(function() {
+	    $( "#chest-slider-range" ).slider({
+	      values: [ $("#chest-min").val(), $("#chest-max").val() ]
+	  	});
+    });
+  	$("#chest-max").change(function() {
+	    $( "#chest-slider-range" ).slider({
+	      values: [ $("#chest-min").val(), $("#chest-max").val() ]
+	  	});
+    });
+  $("#chest-min").val($( "#chest-slider-range" ).slider( "values", 0 ));
+  $("#chest-max").val($( "#chest-slider-range" ).slider( "values", 1 ));
+  } );
+
+	
+  $( function() {
+    $( "#height-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 230,
+      values: [ 0, 230 ],
+      slide: function( event, ui ) {
+  $("#height-min").val(ui.values[ 0 ]);
+  $("#height-max").val(ui.values[ 1 ]);
+      }
+    });
+  	$("#height-min").change(function() {
+	    $( "#height-slider-range" ).slider({
+	      values: [ $("#height-min").val(), $("#height-max").val() ]
+	  	});
+    });
+  	$("#height-max").change(function() {
+	    $( "#height-slider-range" ).slider({
+	      values: [ $("#height-min").val(), $("#height-max").val() ]
+	  	});
+    });
+  $("#height-min").val($( "#height-slider-range" ).slider( "values", 0 ));
+  $("#height-max").val($( "#height-slider-range" ).slider( "values", 1 ));
+  } );
+
+
+
+  $( function() {
+    $( "#age-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 120,
+      values: [ 0, 120 ],
+      slide: function( event, ui ) {
+  $("#age-min").val(ui.values[ 0 ]);
+  $("#age-max").val(ui.values[ 1 ]);
+      }
+    });
+  	$("#age-min").change(function() {
+	    $( "#age-slider-range" ).slider({
+	      values: [ $("#age-min").val(), $("#age-max").val() ]
+	  	});
+    });
+  	$("#age-max").change(function() {
+	    $( "#age-slider-range" ).slider({
+	      values: [ $("#age-min").val(), $("#age-max").val() ]
+	  	});
+    });
+  $("#age-min").val($( "#age-slider-range" ).slider( "values", 0 ));
+  $("#age-max").val($( "#age-slider-range" ).slider( "values", 1 ));
+	} );
+	
+
+<!----------------------- page size  starts ---------------->
+// $(function(){
+
+// var $gallery = $('#gallery');
+// var $menu = $('.menu');
+// var $aside=$('.aside');
+// var $window = $(window).on('resize', function(){
+// 	 var height1 = $gallery.height();
+// 	 var height2 = $aside.height();
+// 	 var height = Math.max(height1,height2);
+// 	 $menu.height(height);
+// }).trigger('resize'); //on page load
+
+// });
+<!----------------------- page size  starts ---------------->
+
+
+  </script>
+
+<!-- lazyload -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('img').lazyload({
+				threshold: 200,
+				effect: 'fadeIn'
+			});
+		});
+	</script>
+
+<style type="text/css">
+
+		
+		body{
+			color: #023749;
+			text-align: center;
+		}
+
+		/*-------------------------Nav bar starts here-----------  */
+		.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+	}
+	.top{
+    background-color: #023749;
+    color: #ffffff;
+    height: 100px;
+    font-family: book;
+    font-size: 40px;
+    text-align: start;
+    width: auto;
+    min-width: 319px;
+    
+	}
+	
+	/*-------------------------Nav bar ends here-----------  */
+    .selected {
+      opacity: 0.5;
+    }
+    .btn{
+    	width:140px; 
+    	margin-bottom: 10px;
+    }
+	footer {
+	  background: #023749;
+	  padding: 10px;
+	  font-size: 20px;
+	  color: #777;
+	}
+	.container{
+		background: #fff;
+		border-radius: 0 0 10px 10px;
+	}
+	.btn-info{
+		background-color: #333;
+		border-color: #333;
+	}
+	.btn-info:focus{
+		background-color: #000;
+		border-color: #000;
+	}
+	.btn-info:hover{
+		background-color: #000;
+		border-color: #000;
+	}
+
+	h4{font-size: 15px;
+	}
+	/* ---------------------------Menu stars ---------------- */
+.menu{
+	background-color: #023749;
+	color: #fff;
+	margin-top: 3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.menu div{
+		width: 35px;
+    height: 5px;
+    background-color:#fff;
+		margin: 6px 0;
+		text-align: center;
+		padding: 3px;
+		margin-left: 28px;
+}
+
+/* ---------------------------Menu ends ---------------- */	
+
+/* ---------------------------Side bar stars ---------------- */
+	.search_by_name{	
+		width: 100%;
+	}
+
+	.ui-slider-horizontal{
+		border-radius: 2px;
+		background: #f6f6f6;
+	}
+	td:nth-child(n) {  
+  text-align: left;
+} .ccbtn{
+    display:inline-block;
+    border: 1px solid rgb(19,163,153);
+    background: white; 
+    color:rgb(19,163,153);
+    font-size: 15px;
+    padding:12px 25px;
+    cursor:pointer;
+		text-decoration:none;
+		margin-bottom: 10px;
+
+  }
+  .ccbtn:hover{
+  
+	background:rgb(19,163,153);
+	color: white;
+  }
+	/* ---------------------------Side bar ends ---------------- */
+	/* ---------------------------Gallery image stars ---------------- */
+	#gallery img {
+	width:125px;
+	height:170px;
+	object-fit:contain;
+	cursor:pointer;
+	border: 1px solid red;
+	left: 0;
+	align-items: center;
+	
+}
+	/* ---------------------------Gallery image stars ---------------- */
+  </style>
+    
+</head>
+<body>
+
+  
+    <div class="nav">
+           
+            <div class="container-fluid top">
+              <div style="width: 100%px; height:10px;"></div>
+        <img src="images/ff_Webp.net-resizeimage.png">
+             <!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
+            </div>   
+    </div> 
+
+		           
+	    <div class="row">
+				<div class="col-md-1 menu">
+						<div></div>
+						<div></div>
+						<div></div>
+				</div>
+		    <div class="col-md-3 col-sm-12" style="border-right: 2px solid #023749;">
+		     <div class="aside">
+		            	
+		          <form action="/search/" method="post" enctype="multipart/form-data" onsubmit=" return validateForm()">
+		          		{% csrf_token %}
+		                  
+
+		            <br><br><br><br>
+		            <div>
+		            	<h4><b>SEARCH BY NAME</b></h4>
+		            	<input type="text" name="name" class="search_by_name"> 
+		            </div>
+		            <div>
+		            	<h4><b>SEARCH BY IMAGE ID</b></h4>
+		            	<input type="text" name="uid" class="search_by_name"> 
+		            </div>
+		            <div class="height">
+		              <h4><b> Height (in cm)</b></h4>
+									<div id="height-slider-range"></div><br>
+									<div style="float: left;">
+										<label>Min</label>
+										<input type="text" id="height-min" name="heightmin" style="width: 35px;">
+									</div>
+									<div style="float: right;">
+										<label>Max</label>
+										<input type="text" id="height-max" name="heightmax" style="width: 35px;">
+									</div>
+		            </div>
+		            <br><br>
+		            <div class="waist"><h4><b>waist (in cm)</b></h4> 
+							<div id="waist-slider-range"></div><br>
+							<div style="float: left;">
+								<label>Min</label>
+								<input type="text" id="waist-min" name="waistmin" style="width: 35px;">
+							</div>
+							<div style="float: right;">
+								<label>Max</label>
+								<input type="text" id="waist-max"  name="waistmax" style="width: 35px;">
+							</div>
+			            </div> 
+
+		            <br><br><br><br>
+		            <div class="chest"><h4><b>Chest/bust(in cm)</b></h4> 
+							<div id="chest-slider-range"></div><br>
+							<div style="float: left;">
+								<label>Min</label>
+								<input type="text" id="chest-min" name="chestmin" style="width: 35px;">
+							</div>
+							<div style="float: right;">
+								<label>Max</label>
+								<input type="text" id="chest-max" name="chestmax" style="width: 35px;">
+							</div>
+			            </div>
+			           <br><br><br><br>
+		            <div class="age">
+		              <h4><b>Age (in years)</b></h4>
+						<div id="age-slider-range"></div><br>
+						<div style="float: left;">
+							<label>Min</label>
+							<input type="text" id="age-min" name="agemin" style="width: 35px;">
+						</div>
+						<div style="float: right;">
+							<label>Max</label>
+							<input type="text" id="age-max" name="agemax" style="width: 35px;">
+						</div>
+		            </div>          
+		            <br><br><br><br>
+
+	         	<table class="selectionyesno">
+			          <div class="Beard">
+		            <tr>
+		            			<td><label for="pwd"><p>Beard:</p></label></td>
+								<td><input type="radio" name="beard" value="1" id="beard_yes">
+									<label for="beard_yes"><p>Yes</p></label></td>
+								<td><input type="radio" name="beard" value="0" id="beard_no">
+									<label for="beard_no"><p>No</p></label></td>
+								<td><input type="radio" name="beard" value="2" id="beard_both">
+									<label for="beard_both"><p>Both</p></label></td>
+								</tr>
+			            </div>
+						<div class="Mustache">
+							<tr>
+								<td><label for="pwd"><p>Mustache:</p></label></td>
+								<td><input type="radio" name="mustache" value=1 id="mustache_yes">
+									<label for="mustache_yes"><p>Yes</p></label></td>
+								<td><input type="radio" name="mustache" value=0 id="mustache_no">
+									<label for="mustache_no"><p>No</p></label></td>
+								<td><input type="radio" name="mustache" value="2" id="mustache_both">
+									<label for="mustache_both"><p>Both</p></label></td>
+							</tr>
+			            </div>
+						<div class="Glasses">
+							<tr>
+								<td><label ><p>Glasses:</p></label></td>
+								<td><input type="radio" name="glass" id="glass_yes" value=1>
+									<label for="glass_yes"><p>Yes</p></label></td>
+								<td><input type="radio" name="glass" id="glass_no" value=0>
+									<label for="glass_no"><p>No</p></label></td>
+								<td><input type="radio" name="glass" value="2" id="glass_both">
+									<label for="glass_both"><p>Both</p></label></td>
+							</tr>
+						</div>
+						<div class="Gender">
+							<tr>
+								<td><label for="pwd"><p>Gender:</p></label></td>
+								<td><input type="radio" name="gender" value="Male" id="gender_male">
+									<label for="gender_male"><p>Male</p></label></td>
+								<td><input type="radio" name="gender" value="Female" id="gender_female">
+									<label for="gender_female"><p>Female</p></label></td>
+								<td><input type="radio" name="gender" value="2" id="gender_both">
+									<label for="gender_both"><p>Both</p></label></td>
+							</tr>
+			            </div>
+						</table>
+					<br><br>
+								<div class="skills"><h4><b>SKILLS</b></h4></div>
+		            <div class="Musical_skills">
+			               <a href="#music_skills" class=" skills " data-toggle="collapse">
+                      <div class="col-md-10">Musical Skills</div>
+                      <div class="col-md-2">+</div>
+                     </a>   
+										 <div id="music_skills" class="collapse">
+												<table class="skillstable">
+											 <tr>
+			                    <td><label for="drums"><input type="checkbox" id="drums" name="drums" value="1" /> <span>drums</span><br></label></td>
+			                    <td><label for="guitar"><input type="checkbox" id="guitar" name="guitar" value="1" /> <span>guitar</span><br></label></td>
+			                    <td><label for="piano"><input type="checkbox" id="piano" name="piano" value="1" /> <span>piano</span><br></label></td>
+			                    <td><label for="trumpet"><input type="checkbox" id="trumpet" name="trumpet" value="1" /> <span>trumpet</span><br></label></td>
+												</tr>	
+												<tr>
+														<td><label for="violin"><input type="checkbox" id="violin" name="violin" value="1" /> <span>violin</span><br></label></td>
+														<td><label for="flute"><input type="checkbox" id="flute" name="flute" value="1" /> <span>flute</span><br></label></td>
+														<td><label for="harmonica"><input type="checkbox" id="harmonica" name="harmonica" value="1" /> <span>harmonica</span><br></label></td>
+														<td><label for="organ"><input type="checkbox" id="organ" name="organ" value="1" /> <span>organ</span><br></label></td>
+												</tr>
+												<tr>		
+														<td><label for="thabala"><input type="checkbox" id="thabala" name="thabala" value="1" /> <span>thabala</span><br></label></td>
+												</tr>
+											</table>
+											</div>
+										
+			        </div>
+			        <div class="performance_skills">
+			              <a href="#demo" class="btn btn-info skills" data-toggle="collapse" >Performance Skills</a>    
+			              <div id="demo" class="collapse skil">
+											<table class="performancetable"> 
+											<tr>
+												<td><label for="comedian"><input type="checkbox" id="comedian" name="comedian" value="1" /> <span>Comedian</span><br></label></td>
+			                  <td><label for="dancing"><input type="checkbox" id="dancing" name="dancing" value="1" /> <span>Dancing</span><br></label></td>
+												<td><label for="host"><input type="checkbox" id="host" name="host" value="1" /> <span>Host</span><br></label></td>
+											</tr>
+											<tr>
+												<td><label for="singing"><input type="checkbox" id="singing" name="singing" value="1" /> <span>Singing</span><br></label></td>
+												<td><label for="stunts"><input type="checkbox" id="stunts" name="stunts" value="1" /> <span>Stunts</span><br></label></td>
+												<td><label for="improvisation"><input type="checkbox" id="improvisation" name="improvisation" value="1" /> <span>Improvisation</span><br></label></td>
+											</tr>
+											<tr>
+												<td><label for="juggling"><input type="checkbox" id="juggling" name="juggling" value="1" /> <span>Juggling</span><br></label></td>
+												<td><label for="magic"><input type="checkbox" id="magic" name="magic" value="1" /> <span>Magic</span><br></label></td>			
+												<td><label for="martical_arts"><input type="checkbox" id="martical_arts" name="martical_arts" value="1" /> <span>Martial Arts</span><br></label></td>
+											</tr>	
+											</table>     
+			                </div>
+			        </div>
+			        <div class="athletic_skills">
+			              <a href="#dmo" class="btn btn-info skills" data-toggle="collapse">Athletic Skills</a>   
+			              <div id="dmo" class="collapse ath">
+                      <table class="athletictable">
+                        <tr>
+			                    <td><label for="baseball"><input type="checkbox" id="baseball" name="baseball" value="1" /> <span>Baseball</span><br></label></td>
+			                    <td><label for="basketball"><input type="checkbox" id="basketball" name="basketball" value="1" /> <span>Basketball</span><br></label></td>
+			                    <td><label for="boxing"><input type="checkbox" id="boxing" name="boxing" value="1" /> <span>boxing</span><br></label></td>
+                         </tr>
+                         <tr> 
+			                    <td><label for="football"><input type="checkbox" id="football" name="football" value="1" /> <span>Football</span><br></label></td>
+                          <td><label for="surfing"><input type="checkbox" id="surfing" name="surfing" value="1" /> <span>Surfing</span><br></label></td>
+			                    <td><label for="aerobics"><input type="checkbox" id="aerobics" name="aerobics" value="1" /> <span>Aerobics</span><br></label></td>
+                         </tr>
+                         <tr> 
+			                    <td><label for="cycling"><input type="checkbox" id="cycling" name="cycling" value="1" /> <span>Cycling</span><br></label></td>
+			                    <td><label for="swimming"><input type="checkbox" id="swimming" name="swimming" value="1" /> <span>Swimming</span><br></label></td>
+			                    <td><label for=""><input type="checkbox" id="tennis" name="tennis" value="1" /> <span>Tennis</span><br></label></td>
+			                   </tr>
+                         <tr>
+                          <td><label for="vollyball"><input type="checkbox" id="volleyball" name="volleyball" value="1" /> <span>Volleyball</span><br></label></td>
+			                    <td><label for="wrestling"><input type="checkbox" id="wrestling" name="wrestling" value="1" /> <span>Wrestling</span><br></label></td>
+			                    <td><label for="yoga"><input type="checkbox" id="yoga" name="yoga" value="1" /> <span>Yoga</span><br></label></td>
+                        </tr>                      
+                      </table>			      
+                      </div>
+			        </div>
+			        <div class="dancing_skills">
+			              <a href="#dance" class="btn btn-info skillheights" data-toggle="collapse">Dancing Skills</a>   
+			              <div id="dance" class="collapse danc">
+                      <table class="dancingtable">
+                        <tr>
+			                    <td><label for="bharatanatyam"><input type="checkbox" id="bharatanatyam" name="bharatanatyam" value="1" /> <span>Bharatanatyam</span><br></label></td>
+			                    <td><label for="kathak"><input type="checkbox" id="kathak" name="kathak" value="1" /> <span>Kathak</span><br></label></td>
+			                    <td><label for="kathakali"><input type="checkbox" id="kathakali" name="kathakali" value="1" /> <span>Kathakali</span><br></label></td>
+			                   </tr>
+                         <tr> 
+                          <td><label for="salsa"><input type="checkbox" id="salsa" name="salsa" value="1" /> <span>Salsa</span><br></label></td>
+			                    <td><label for="freestyle"><input type="checkbox" id="freestyle" name="freestyle" value="1" /> <span>Free style</span><br></label></td>
+			                    <td><label for="hiphop"><input type="checkbox" id="hiphop" name="hiphop" value="1" /> <span>Hip hop</span><br></label></td>
+                         </tr>
+                         <tr> 
+			                    <td><label for="kuchipudi"><input type="checkbox" id="kuchipudi" name="kuchipudi" value="1" /> <span>Kuchipudi</span><br></label></td>
+			                    <td><label for="odissi"><input type="checkbox" id="odissi" name="odissi" value="1" /> <span>Odissi</span><br></label></td>
+			                    <td><label for=""><input type="checkbox" id="western" name="western" value="1" /> <span>Western</span><br></label></td>
+			                    </tr>
+                          <tr>
+                          <td><label for="otherclassicals"><input type="checkbox" id="otherclassicals" name="otherclassicals" value="1" /> <span>Other classicals</span><br></label></td>
+			                   </tr>
+                        </table> 
+			                </div>
+			        </div>
+			        <div class="work_history">
+			              <a href="#work" class="btn btn-info skills" data-toggle="collapse">Work history</a>   
+			              <div id="work" class="collapse skil">
+			                
+			                  <div class="work_history">
+                          <table class="worktable">
+                          <tr>  
+			                    <td><label for="commercial"><input type="checkbox" id="commercial" name="commercial" value="1" /> <span>commercial</span><br></label></td>
+			                    <td><label for="film"><input type="checkbox" id="film" name="film" value="1" /> <span>film</span><br></label></td>
+			                    <td><label for="television"><input type="checkbox" id="television" name="television" value="1" /> <span>television</span><br></label></td>
+			                    </tr>
+                          <tr>
+                          <td><label for="theater"><input type="checkbox" id="theater" name="theater" value="1" /> <span>theater</span><br></label></td>
+			                    <td><label for="voice over"><input type="checkbox" id="voice_over" name="voice_over" value="1" /> <span>voice over</span><br></label></td>
+			                    <td><label for="short film"><input type="checkbox" id="short_film" name="short_film" value="1" /> <span>short film</span><br></label></td>
+			                    </tr>
+                          <tr>
+                          <td><label for="radio"><input type="checkbox" id="radio" name="radio" value="1" /> <span>radio</span><br></label></td>
+			                   </tr>
+                       </table>
+			                  </div>
+			                 </div>
+			        </div>
+
+		            <!-- <div>       
+			            <input type="submit" value = "search" class="upload" onclick="submit" style="background-color: green; border-radius: 5px;" />
+								</div> -->
+								<div class="ccfield-prepend">
+										<center><input class="ccbtn upload" type="submit" value="search" style="margin-top: 30px;"></center>
+								</div>
+		          </form>
+		          
+		     </div> 
+		    </div>
+		      
+		    <div class="col-md-8 col-sm-12">
+		     <div id="gallery">  
+						<form method="post" action="/select/"></form>	 
+						<h2><b>BEST MATCHES</b></h2><br>
+						<p>HOVER ON THE PICTURE FOR MORE OPTION</p>
+						<div class="col-sm-3">
+							<h4 class="col-sm-10">SELECT ALL</h4><input type="checkbox" class="col-sm-2">
+						</div>
+						<div class="col-sm-3">
+						<h4 class="col-sm-10">UNSELECT ALL</h4><input type="checkbox" class="col-sm-2">
+						</div>
+						<div class="col-sm-6">
+							<h4><u>VIEW SELECTED PROFILES</u></h4>
+							<br><br><br>
+						</div>
+			          <input type="hidden" name="selected" id="selected">
+			          <!-- <input type="hidden" name="token" id="token" value="1234567890"> -->
+					    <!-- <div style="position: fixed; top: 20vh; left: auto; right: 0px; padding: 20px; background-color: #333; color: #fff; z-index: 4">
+					    	<label>Click to view<br>selected images</label><br>
+				            <input type="submit" value="submit" style="float: right; background-color: green; border-radius: 5px;" />
+					    </div> -->
+			        </form>
+
+			          <div class="row">
+				       {% for i in search_list %}
+				              {% load static %}
+			            <div class="col-md-6 col-sm-12">
+			             <div>
+			              <img data-original="{% static i %}" id="{{i}}" style="" height="100px" width="70px">
+			              <form action="/profile/" method="post" enctype="multipart/form-data">
+			                <!-- <input type="hidden" name="token" id="token" value="1234567890"> -->
+			              	<input type="submit"  value="profile" name="{{i}}" style="border-radius: 5px; background-color: #e0e0e0;">
+			              </form>
+			             </div>
+			            </div>
+				          {% empty %}
+				          
+				          <p>No matches</p>
+				          
+				        {% endfor %}
+			         </div>   
+          </div>
+          </div>                 
+		</div>
+
+  <footer>
+    
+    <center>© Filmloop.in</center>
+    
+  </footer>
+  
+
+  <script>
+    $(document).ready( function (){
+      $("img").click( function(){
+        var $this = $(this);
+        $this.toggleClass('selected');
+        
+        if($this.hasClass('selected')) {
+            $('#selected').val($('#selected').val() + $this.attr('id') + ' ');
+        }
+        else {
+            $('#selected').val($('#selected').val().replace($this.attr('id')+' ',''));
+        }
+      });
+    });
+
+  </script>
+
+<input type="hidden" id="refreshed" value="no"> 
+<script type="text/javascript"> onload=function(){ var e=document.getElementById("refreshed"); if(e.value=="no")e.value="yes"; else{e.value="no";location.reload();} } 
+</script>
+
+
+  </body>
+</html>
+
+
+
+
+
