@@ -24,7 +24,7 @@
 
 		 @font-face{
 			 font-family: "toptext";
-			 src: url("../fonts/Montserrat-Medium.otf");
+			 src: url("fonts/Montserrat-Medium.otf");
 		 }
 
 		@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
@@ -38,7 +38,6 @@
 			text-transform: uppercase;
 			margin:0;
 			padding:0;
-			text-align: center;
 			
 		}
 
@@ -241,6 +240,10 @@
     
    
   }
+  .video{
+  	font-size: 18px;
+  }
+
 		
 	</style>
 
@@ -252,7 +255,7 @@
            
 		<div class="container-fluid top">
 		  <div style="width: 100%px; height:10px;"></div>
-				<img src="/static/regimage/images/ff_Webp.net-resizeimage.png">
+				<img src="images/ff_Webp.net-resizeimage.png">
 		 		<!--  <div><span class="glyphicon glyphicon-cog"></span></div> -->
 		</div>
 	   
@@ -267,23 +270,26 @@
 	<div class="container">
 		<div class="form-group" id="uploder">
 			<br>
-			<p id="final_touch" >One final touch</p>
+			<p id="final_touch" style="text-align: center;">One final touch</p>
+			<form style="padding-left: 1vw;" action="/regimage/" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+				
+					<label for=""><p style="text-align: left;">Add Video links here.</p></label><br>
+				<div class="video">	
+					<input class="col-md-12" type="text" name="video1" placeholder="You can upload video-1 link" value="{% if video1 %} {{ video1 }} {% endif %}"><br>
+					<input class="col-md-12" type="text" name="video2" placeholder="You can upload video-2 link" value="{% if video2 %} {{ video2 }} {% endif %}">
+				</div>
+				<br>
+				<br>
 			
-			<p>Upload photos</p>
+			<p >Upload photos</p>
 			
 			<h4 style="text-decoration:underline; text-decoration-color:rgb(19,163,153);">Finish up your account with your pictures</h4>
-			<br>
-			<form style="padding-left: 1vw;" action="/regimage/" method="post" enctype="multipart/form-data">
-				{% csrf_token %}
-				<div class="video">
-					<label for=""><h2>Add Video links here.</h2></label><br>
-					<input type="text" name="video1" placeholder="You can upload video-1 link" value="{% if video1 %} {{ video1 }} {% endif %}">
-					<input type="text" name="video2" placeholder="You can upload video-2 link" value="{% if video2 %} {{ video2 }} {% endif %}">
-				</div>
+			
+				
 		<div>
 
-			<h2>Image Uploader</h2>
-			<p>Maximum 10 photos</p>
+			<p style="font-size: 10px;">Maximum 10 photos</p>
 			<input type="file" name="images[]" id="images" class="imagenormal" multiple>
 			
 <!-- 			<input type="hidden" name="removed" id="removed">		
@@ -294,8 +300,8 @@
 			<div class="loader" style="display: none"></div>
 			<div class="wait" style="display: none">Please Wait</div>		
 
-		</div>
-		</form>
+			</div>	
+	
 
 
 
@@ -313,9 +319,9 @@
 
 	        {% endfor %}
        
-      
-    
-   	</div>
+   		</div>
+   		</div>
+   		</form>	
 	</div>
 	<script>
 
