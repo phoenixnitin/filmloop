@@ -314,9 +314,9 @@
 	          <button class="btn btn-default mybtn remove" >Remove</button>
 	       </div>
 	          {% empty %}
-	          
-	          <p>No matches</p>
-
+	          <div class="message">
+	          <p>No files currently selected for upload</p>
+	     	  </div>
 	        {% endfor %}
        
    		</div>
@@ -344,7 +344,7 @@
 				reader.readAsDataURL(file);
 				reader.onload = function(e){
 					var template = 
-						'<img src="'+e.target.result+'"> '
+						'<img src="'+e.target.result+'"> + <br> '
 						
 					$('#images-to-upload').append(template);
 					console.log($('#images-to-upload'))
@@ -416,6 +416,16 @@
         $(".loader").show();
     });
   });
+
+// var input = document.querySelector('input');
+// var preview = document.querySelector('.message');
+
+// var curFiles = input.files;
+//   if(curFiles.length === 0) {
+//     var para = document.createElement('p');
+//     para.textContent = 'No files currently selected for upload';
+//     preview.appendChild(para);
+//   } else {
 
 </script>
 
